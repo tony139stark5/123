@@ -182,7 +182,7 @@ _sewa.expiredCheck(zxyn, sewa)
             console.log('Reseted Limit')
         }, {
             scheduled: true,
-            timezone: "Asia/Jakarta"
+            timezone: "Asia/colombo"
         })
         
     // auto set bio
@@ -190,7 +190,7 @@ _sewa.expiredCheck(zxyn, sewa)
         let setting = global.db.data.settings[botNumber]
         if (new Date() * 1 - setting.status > 1000) {
         let uptime = await runtime(process.uptime())
-        await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
+        await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A | BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
         setting.status = new Date() * 1
         }
     }
@@ -4759,7 +4759,7 @@ let btn = [{
             break
                    
             case 'menu': case 'help': case '?': case 'alive': {
-                anu = `${ucapanWaktu} ${pushname}\n\nSaya ${global.namabot}, Bot Ini Adalah Beta Multi Device WhatsApp.\n\n${global.namabot} Adalah Hasil Recode ${global.namaowner} Menggunakan sc dari O S H A D A (YosaArdn).\n\nJika Kamu Menemukan Semacam Bug Atau Kesalahan Harap Lapor Ke owner Agar Segera Di Perbaiki😁`
+                anu = `${ucapanWaktu} ${pushname}\n\nHellow ${global.namabot}, I am A Whatsapp Multi Device User Bot.\n\n${global.namabot} Wellcome To menu ${global.namaowner} My Creator Is '''Vimukthi'''.\n\nYou Can Find Any Bug Tell The Creator😁`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'owner📽️',
