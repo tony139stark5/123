@@ -190,7 +190,7 @@ _sewa.expiredCheck(zxyn, sewa)
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await zxyn.setStatus(`${'©O S H A D A'} | Runtime : ${runtime(uptime)}`)
+		await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A  '} | Runtime : ${runtime(process.uptime())`)
 		setting.status = new Date() * 1
 	    }
 	}
