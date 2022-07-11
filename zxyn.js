@@ -2899,7 +2899,7 @@ anu = `╭──「 *SEWABOT* 」
 ├  DAN RATUSAN FITUR LAINYA
 ╰────
 ╭─[ *MINAT CHAT* ]
-├  🪀 wa.me/6285822347348?text=SEWABOT
+├  🪀 wa.me/94775792013?text=Hiiii
 ╰────
 ╭─[ *PAYMENT* ]
 ├  DANA
@@ -4841,53 +4841,7 @@ case 'rules': {
 
 Sanksi : *Warn/Soft Block*
 
-*About Questions⁉️*
-
-👦 : Bot nya Slow Respon
-🤖 : Mohon Bersabar, Mungkin
-Kendala Dari Jaringan, Signal,
-Atau Bahkan Terbanned Dari
-Pihak WhatsApp
-
-👦 : Scriptnya Beli Dimana?
-🤖 : Script Ini Tidak Di
-Perjualbelikan!
-
-👦 : Boleh Masukin Ke Grup Saia
-Tidak?
-🤖 : Untuk Masalah Memasukkan
-Bot Ke Dalam Grup Bisa
-Menghubungi Owner
-
-👦 : Apakah Bot Ini Masih
-Menyimpan File Yang Saya Kirim?
-🤖 : Data WhatsApp Anda Hanya
-Tersimpan Saat Bot Aktif, Dan Bot
-Tidak Pernah Menyimpan File-file
-Yang Anda Kirim
-
-👦 : Min, Ada Fitur Yang Error
-🤖 : Jika Menemukan Bug/Error
-Silahkan Langsung Hubungi
-Owner/Creator Agar Segera Di Fix
-
-Tetap Patuhi Rules Agar Tetap
-Bisa Menikmati Bot
-
-*Note* : Segala Ketentuan Dan
-Kebijakan Yang Berlaku Di Pegang
-Oleh Owner Bot, Sewaktu-Waktu
-Owner Berhak Memakai Ataupun
-Mengubah Kebijakan Dan
-Ketentuan Yang Berlaku
-
-*Thanks* Buat Kalian
-User-User Yang Sudah Memakai
-Script Ini Dan Pengguna Bot
-Yang Sudah Mau Mematuhi
-Rules, Serta Para Constributor
-Yang Sudah Membantu Dalam
-Pembuatan Bot Ini
+හායි I am Whatsapp User Bot Bulding On stage Creator https://wa.me/+94775792013
 Ini`
 let btn = [{
                                 urlButton: {
