@@ -3461,7 +3461,7 @@ anu = `${ucapanWaktu} ${pushname}
 let btn = [{
                                 urlButton: {
                                     displayText: 'Owner📽️',
-                                    url: 'wa.me/+94775792013'
+                                    url: 'https://wa.me/+94775792013'
                                 }
                                 }, {
                                 urlButton: {
@@ -3480,7 +3480,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: ' Menu📚',
                                     id: 'command'
                                 }
                             }]
