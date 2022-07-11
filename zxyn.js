@@ -205,7 +205,7 @@ _sewa.expiredCheck(zxyn, sewa)
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return m.reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
         if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu O W N E R bot ku`)
+        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
         zxyn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -572,7 +572,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             let timeout = 60000
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
         if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
-            if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${O W N E R[1]}`, m.chat, { mentions: [O W N E R[1] + '@s.whatsapp.net'] })
+            if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`
             let id = 'suit_' + new Date() * 1
             let caption = `_*SUIT PvP*_
@@ -621,7 +621,7 @@ let btn = [{
                      }
             break
             case 'chat': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'
                 if (args[0] === 'mute') {
                     zxyn.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
@@ -796,7 +796,7 @@ let btn = [{
             }
             break
             case 'react': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 reactionMessage = {
                     react: {
                         text: args[0],
@@ -807,7 +807,7 @@ let btn = [{
             }
             break  
             case 'join': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!text) throw 'Masukkan Link Group!'
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw 'Link Invalid!'
                 m.reply(mess.wait)
@@ -816,12 +816,12 @@ let btn = [{
             }
             break
             case 'leave': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 await zxyn.groupLeave(m.chat).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
             }
             break
             case 'setexif': {
-               if (!isCreator) throw mess.O W N E R
+               if (!isCreator) throw mess.owner
                if (!text) throw `Example : ${prefix + command} packname|author`
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
@@ -861,13 +861,13 @@ let btn = [{
     }
     break
         case 'block': {
-        if (!isCreator) throw mess.O W N E R
+        if (!isCreator) throw mess.owner
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
         await zxyn.updateBlockStatus(users, 'block').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
     }
     break
         case 'unblock': {
-        if (!isCreator) throw mess.O W N E R
+        if (!isCreator) throw mess.owner
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
         await zxyn.updateBlockStatus(users, 'unblock').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
     }
@@ -889,7 +889,7 @@ let btn = [{
             }
             break
           case 'setppbot': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
@@ -953,7 +953,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                case 'vote': {
             if (!m.isGroup) throw mess.group
             if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
-            if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} O W N E R Ganteng*`
+            if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} owner Ganteng*`
             m.reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
@@ -1233,7 +1233,7 @@ break
             }
             break
             case 'bcgc': case 'bcgroup': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let getGroups = await zxyn.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
@@ -1243,7 +1243,7 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -1254,7 +1254,7 @@ break
                                 }, {
                                 quickReplyButton: {
                                     displayText: 'Donasi💰',
-                                    id: 'O W N E R'
+                                    id: 'owner'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1274,7 +1274,7 @@ break
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let anu = await store.chats.all().map(v => v.id)
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
@@ -1282,7 +1282,7 @@ break
             await sleep(1500)
             let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -1293,7 +1293,7 @@ break
                                 }, {
                                 quickReplyButton: {
                                     displayText: 'Donasi💰',
-                                    id: 'O W N E R'
+                                    id: 'owner'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1349,7 +1349,7 @@ break
                  let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
                  for (let i of anu) {
                      let metadata = await zxyn.groupMetadata(i)
-                     teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *O W N E R :* ${metadata.O W N E R !== undefined ? '@' + metadata.O W N E R.split`@`[0] : 'Tidak diketahui'}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Tidak diketahui'}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  zxyn.sendTextWithMentions(m.chat, teks, m)
              }
@@ -1569,7 +1569,7 @@ break
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
                 let search = await yts(text)
-                let teks = 'O W N E R Search\n\n Result From '+text+'\n\n'
+                let teks = 'owner Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
                     teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
@@ -1644,7 +1644,7 @@ break
             break
         case 'ytmp3': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://O W N E R.com/watch?v=PtFMh6Tccag%27 128kbps`
+                if (!text) throw `Example : ${prefix + command} https://owner.com/watch?v=PtFMh6Tccag%27 128kbps`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
@@ -1654,7 +1654,7 @@ break
             break
             case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://O W N E R.com/watch?v=PtFMh6Tccag%27 360p`
+                if (!text) throw `Example : ${prefix + command} https://owner.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
@@ -1666,7 +1666,7 @@ break
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) return m.reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-        let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?O W N E R\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+        let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?owner\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
@@ -1680,7 +1680,7 @@ break
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) return m.reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?O W N E R\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?owner\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
@@ -2449,7 +2449,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
             }
             break
             case 'lockcmd': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 if (!m.quoted) throw 'Reply Pesan!'
                 if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
                 let hash = m.quoted.fileSha256.toString('base64')
@@ -2608,13 +2608,13 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 break
             }
             case 'public': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 zxyn.public = true
                 m.reply('Sukse Change To Public Usage')
             }
             break
             case 'self': {
-                if (!isCreator) throw mess.O W N E R
+                if (!isCreator) throw mess.owner
                 zxyn.public = false
                 m.reply('Sukses Change To Self Usage')
             }
@@ -2683,8 +2683,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
-            case 'O W N E R': case 'creator': {
-                zxyn.sendContact(m.chat, global.O W N E R, m)
+            case 'owner': case 'creator': {
+                zxyn.sendContact(m.chat, global.owner, m)
             }
             break
             case 'playstore': {
@@ -2802,7 +2802,7 @@ let capt = `⭔ Title: ${judul}
             }
             break
             case 'setmenu': {
-            if (!isCreator) throw mess.O W N E R
+            if (!isCreator) throw mess.owner
             let setbot = db.data.settings[botNumber]
                if (args[0] === 'templateImage'){
                 setbot.templateImage = true
@@ -2852,13 +2852,13 @@ let capt = `⭔ Title: ${judul}
                 ]
                 },
                 ]
-                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© O S H A D A', `Hello O W N E R !`, `Click Here`, sections, m)
+                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© O S H A D A', `Hello owner !`, `Click Here`, sections, m)
                 }
             }
             break
 
 case 'sewa':
-if (!isCreator) return m.reply(mess.O W N E R)
+if (!isCreator) return m.reply(mess.owner)
 if (!q) return m.reply(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
 if (args[0] === 'add'){
 _sewa.addSewaGroup(from, args[1], sewa)
@@ -2950,7 +2950,7 @@ break
 case 'command':{
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `${ucapanWaktu} ${pushname}\n\nJika Kamu Menemukan Kesalahan Jangan Nanya Ke O W N E R, Mungkin Itu gara² Lu Sendiri\n`,
+                    title: `${ucapanWaktu} ${pushname}\n\nJika Kamu Menemukan Kesalahan Jangan Nanya Ke owner, Mungkin Itu gara² Lu Sendiri\n`,
                     description: "*Klik Tombol Dibawah Untuk Melihat Menu Yang Tersedia👇*",
                     buttonText: "KLIK DISINI",
                     footerText: "O S H A D A",
@@ -2969,9 +2969,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                                 "title": "List Menu Bot",
                                 "rows": [
                                     {
-                                        "title": "O W N E R Menu",
-                                        "description": "Menampilkan O W N E R Menu",
-                                        "rowId": `${prefix}O W N E Rmenu`
+                                        "title": "owner Menu",
+                                        "description": "Menampilkan owner Menu",
+                                        "rowId": `${prefix}ownermenu`
                                     },
                                     {
                                         "title": "Group Menu",
@@ -3061,7 +3061,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                                     {
                                         "title": "Creator",
                                         "description": "Menampilkan Nomor Creator",
-                                        "rowId": `${prefix}O W N E R`
+                                        "rowId": `${prefix}owner`
                                     }
                                 ]
                             },
@@ -3102,7 +3102,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3116,7 +3116,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 
 
-╭─❏ *『 O W N E R MENU 』*
+╭─❏ *『 owner MENU 』*
 │➪ ${prefix}sewa
 │➪ ${prefix}react [emoji]
 │➪ ${prefix}chat [option]
@@ -3335,7 +3335,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 ╭─❏ *『 MAIN MENU 』*
 │➪ ${prefix}ping
-│➪ ${prefix}O W N E R
+│➪ ${prefix}owner
 │➪ ${prefix}menu / ${prefix}help / ${prefix}?
 │➪ ${prefix}delete
 │➪ ${prefix}infochat
@@ -3383,7 +3383,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'Update Soon'
                                 }
                                 }, {
@@ -3398,8 +3398,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3421,7 +3421,7 @@ let btn = [{
                         }
                      }
             break
-case 'O W N E Rmenu': {
+case 'ownermenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
 │ ➪ Name : ${pushname}
@@ -3430,7 +3430,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3444,7 +3444,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 
 
-╭─❏ *『 O W N E R MENU 』*
+╭─❏ *『 owner MENU 』*
 │➪ ${prefix}sewa
 │➪ ${prefix}react [emoji]
 │➪ ${prefix}chat [option]
@@ -3460,7 +3460,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'https://wa.me/+94775792013'
                                 }
                                 }, {
@@ -3475,8 +3475,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3507,7 +3507,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3546,7 +3546,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3561,8 +3561,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3593,7 +3593,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3619,7 +3619,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3634,8 +3634,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3666,7 +3666,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3699,7 +3699,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3714,8 +3714,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3746,7 +3746,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3774,7 +3774,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3789,8 +3789,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3821,7 +3821,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3852,7 +3852,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3867,8 +3867,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3899,7 +3899,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3948,7 +3948,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3963,8 +3963,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3995,7 +3995,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4025,7 +4025,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4040,8 +4040,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4072,7 +4072,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4099,7 +4099,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4114,8 +4114,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4146,7 +4146,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4178,7 +4178,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4193,8 +4193,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4225,7 +4225,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4273,7 +4273,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4288,8 +4288,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4320,7 +4320,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4356,7 +4356,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4371,8 +4371,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4403,7 +4403,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4419,7 +4419,7 @@ anu = `${ucapanWaktu} ${pushname}
            
 ╭─❏ *『 MAIN MENU 』*
 │➪ ${prefix}ping
-│➪ ${prefix}O W N E R
+│➪ ${prefix}owner
 │➪ ${prefix}menu / ${prefix}help / ${prefix}?
 │➪ ${prefix}delete
 │➪ ${prefix}infochat
@@ -4431,7 +4431,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4446,8 +4446,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4478,7 +4478,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4504,7 +4504,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4519,8 +4519,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4551,7 +4551,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4573,7 +4573,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4588,8 +4588,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4620,7 +4620,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4643,7 +4643,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4658,8 +4658,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4690,7 +4690,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ O W N E R : ${global.namaO W N E R}
+│ ➪ owner : ${global.namaowner}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4719,7 +4719,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4734,8 +4734,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4759,10 +4759,10 @@ let btn = [{
             break
                    
             case 'menu': case 'help': case '?': case 'alive': {
-                anu = `${ucapanWaktu} ${pushname}\n\nSaya ${global.namabot}, Bot Ini Adalah Beta Multi Device WhatsApp.\n\n${global.namabot} Adalah Hasil Recode ${global.namaO W N E R} Menggunakan sc dari O S H A D A (YosaArdn).\n\nJika Kamu Menemukan Semacam Bug Atau Kesalahan Harap Lapor Ke O W N E R Agar Segera Di Perbaiki😁`
+                anu = `${ucapanWaktu} ${pushname}\n\nSaya ${global.namabot}, Bot Ini Adalah Beta Multi Device WhatsApp.\n\n${global.namabot} Adalah Hasil Recode ${global.namaowner} Menggunakan sc dari O S H A D A (YosaArdn).\n\nJika Kamu Menemukan Semacam Bug Atau Kesalahan Harap Lapor Ke owner Agar Segera Di Perbaiki😁`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'Update Soon'
                                 }
                                 }, {
@@ -4777,8 +4777,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'O W N E R👤',
-                                    id: 'O W N E R'
+                                    displayText: 'owner👤',
+                                    id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -4810,7 +4810,7 @@ anu = `╭─❏ *『 DONASI 』*
 *TERIMA KASIH BUAT YANG SUDAH MAU DONASI🤗*`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: '085822347348'
                                 }
                                 }, {
@@ -4845,7 +4845,7 @@ Sanksi : *Warn/Soft Block*
 Ini`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4897,7 +4897,7 @@ Penyedia Rest Api :
 https://zenzapis.xyz`
     let btn = [{
                                 urlButton: {
-                                    displayText: 'O W N E R📽️',
+                                    displayText: 'owner📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4937,7 +4937,7 @@ https://zenzapis.xyz`
             break
             default:
                 if (budy.startsWith('=>')) {
-                    if (!isCreator) return m.reply(mess.O W N E R)
+                    if (!isCreator) return m.reply(mess.owner)
                     function Return(sul) {
                         sat = JSON.stringify(sul, null, 2)
                         bang = util.format(sat)
@@ -4954,7 +4954,7 @@ https://zenzapis.xyz`
                 }
 
                 if (budy.startsWith('>')) {
-                    if (!isCreator) return m.reply(mess.O W N E R)
+                    if (!isCreator) return m.reply(mess.owner)
                     try {
                         let evaled = await eval(budy.slice(2))
                         if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
@@ -4965,7 +4965,7 @@ https://zenzapis.xyz`
                 }
 
                 if (budy.startsWith('$')) {
-                    if (!isCreator) return m.reply(mess.O W N E R)
+                    if (!isCreator) return m.reply(mess.owner)
                     exec(budy.slice(2), (err, stdout) => {
                         if(err) return m.reply(err)
                         if (stdout) return m.reply(stdout)
