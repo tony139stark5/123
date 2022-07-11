@@ -67,7 +67,7 @@ module.exports = zxyn = async (zxyn, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await zxyn.decodeJid(zxyn.user.id)
-        const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isCreator = [botNumber, ...global.O W N E R].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const from = m.chat
@@ -97,17 +97,17 @@ module.exports = zxyn = async (zxyn, m, chatUpdate, store) => {
         if(time2 < "03:00:00"){
         var ucapanWaktu = 'Good Night '
 }
-	
+    
         // Group
         const groupMetadata = m.isGroup ? await zxyn.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
-    	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
-    	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
-    	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-	
-	try {
+        const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
+        const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
+        const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
+    
+    try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
             let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
             let user = global.db.data.users[m.sender]
@@ -131,37 +131,37 @@ module.exports = zxyn = async (zxyn, m, chatUpdate, store) => {
                 mute: false,
                 antilink: true,
             }
-		
-	    let setting = global.db.data.settings[botNumber]
+        
+        let setting = global.db.data.settings[botNumber]
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
-	    if (setting) {
-		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = true
-		if (!('templateImage' in setting)) setting.templateImage = false
-		if (!('templateVideo' in setting)) setting.templateVideo = false
-		if (!('templateGif' in setting)) setting.templateGif = true
-		if (!('templateMsg' in setting)) setting.templateMsg = false
-		if (!('templateLocation' in setting)) setting.templateLocation = false
-	    } else global.db.data.settings[botNumber] = {
-		status: 0,
-		autobio: true,
-		templateImage: false,
-		templateVideo: false,
-		templateGif: true,
-		templateMsg: false,
-		templateLocation: false,
-	    }
-	    
+        if (setting) {
+        if (!isNumber(setting.status)) setting.status = 0
+        if (!('autobio' in setting)) setting.autobio = true
+        if (!('templateImage' in setting)) setting.templateImage = false
+        if (!('templateVideo' in setting)) setting.templateVideo = false
+        if (!('templateGif' in setting)) setting.templateGif = true
+        if (!('templateMsg' in setting)) setting.templateMsg = false
+        if (!('templateLocation' in setting)) setting.templateLocation = false
+        } else global.db.data.settings[botNumber] = {
+        status: 0,
+        autobio: true,
+        templateImage: false,
+        templateVideo: false,
+        templateGif: true,
+        templateMsg: false,
+        templateLocation: false,
+        }
+        
         } catch (err) {
             console.error(err)
         }
-	    
-	//const lakal = (m.mtype === 'conversation' && m.message.conversation) ? m.message.conversation : (m.mtype == 'imageMessage') && m.message.imageMessage.caption ? m.message.imageMessage.caption : (m.mtype == 'documentMessage') && m.message.documentMessage.caption ? m.message.documentMessage.caption : (m.mtype == 'videoMessage') && m.message.videoMessage.caption ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') && m.message.extendedTextMessage.text ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage' && m.message.buttonsResponseMessage.selectedButtonId) ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'templateButtonReplyMessage') && m.message.templateButtonReplyMessage.selectedId ? m.message.templateButtonReplyMessage.selectedId : ''
+        
+    //const lakal = (m.mtype === 'conversation' && m.message.conversation) ? m.message.conversation : (m.mtype == 'imageMessage') && m.message.imageMessage.caption ? m.message.imageMessage.caption : (m.mtype == 'documentMessage') && m.message.documentMessage.caption ? m.message.documentMessage.caption : (m.mtype == 'videoMessage') && m.message.videoMessage.caption ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') && m.message.extendedTextMessage.text ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage' && m.message.buttonsResponseMessage.selectedButtonId) ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'templateButtonReplyMessage') && m.message.templateButtonReplyMessage.selectedId ? m.message.templateButtonReplyMessage.selectedId : ''
 // Other
 const isSewa = _sewa.checkSewaGroup(from, sewa)
 //Sewa
 _sewa.expiredCheck(zxyn, sewa)
-	
+    
         // Public & Self
         if (!zxyn.public) {
             if (!m.key.fromMe) return
@@ -172,8 +172,8 @@ _sewa.expiredCheck(zxyn, sewa)
             zxyn.readMessages([m.key])
             console.log(chalk.black(chalk.bgWhite('[ PESAN ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> Dari'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> Di'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }
-	
-	// reset limit every 12 hours
+    
+    // reset limit every 12 hours
         let cron = require('node-cron')
         cron.schedule('00 12 * * *', () => {
             let user = Object.keys(global.db.data.users)
@@ -185,17 +185,17 @@ _sewa.expiredCheck(zxyn, sewa)
             timezone: "Asia/Jakarta"
         })
         
-	// auto set bio
-	if (db.data.settings[botNumber].autobio) {
-	    let setting = global.db.data.settings[botNumber]
-	    if (new Date() * 1 - setting.status > 1000) {
-		let uptime = await runtime(process.uptime())
-		await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
-		setting.status = new Date() * 1
-	    }
-	}
-	    
-	  // Anti Link
+    // auto set bio
+    if (db.data.settings[botNumber].autobio) {
+        let setting = global.db.data.settings[botNumber]
+        if (new Date() * 1 - setting.status > 1000) {
+        let uptime = await runtime(process.uptime())
+        await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
+        setting.status = new Date() * 1
+        }
+    }
+        
+      // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
         m.reply(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick !`)
@@ -205,7 +205,7 @@ _sewa.expiredCheck(zxyn, sewa)
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return m.reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
         if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
+        if (isCreator) return m.reply(`Ehh maaf kamu O W N E R bot ku`)
         zxyn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -234,8 +234,8 @@ _sewa.expiredCheck(zxyn, sewa)
         }
         zxyn.ev.emit('messages.upsert', msg)
         }
-	    
-	if (('family100'+m.chat in _family100) && isCmd) {
+        
+    if (('family100'+m.chat in _family100) && isCmd) {
             kuis = true
             let room = _family100['family100'+m.chat]
             let teks = budy.toLowerCase().replace(/[^\w\s\-]+/, '')
@@ -296,11 +296,11 @@ ${Array.from(room.jawaban, (jawaban, index) => {
         if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = caklontong[m.sender.split('@')[0]]
-	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
+        deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
                 await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
                 delete caklontong[m.sender.split('@')[0]]
-		delete caklontong_desk[m.sender.split('@')[0]]
+        delete caklontong_desk[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
 
@@ -321,8 +321,8 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 delete tebaklirik[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
-	    
-	if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+        
+    if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = tebaktebakan[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
@@ -332,51 +332,51 @@ ${Array.from(room.jawaban, (jawaban, index) => {
         }
         
         //TicTacToe
-	    this.game = this.game ? this.game : {}
-	    let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
-	    if (room) {
-	    let ok
-	    let isWin = !1
-	    let isTie = !1
-	    let isSurrender = !1
-	    // m.reply(`[DEBUG]\n${parseInt(m.text)}`)
-	    if (!/^([1-9]|(me)?nyerah|surr?ender|off|skip)$/i.test(m.text)) return
-	    isSurrender = !/^[1-9]$/.test(m.text)
-	    if (m.sender !== room.game.currentTurn) { // nek wayahku
-	    if (!isSurrender) return !0
-	    }
-	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
-	    m.reply({
-	    '-3': 'Game telah berakhir',
-	    '-2': 'Invalid',
-	    '-1': 'Posisi Invalid',
-	    0: 'Posisi Invalid',
-	    }[ok])
-	    return !0
-	    }
-	    if (m.sender === room.game.winner) isWin = true
-	    else if (room.game.board === 511) isTie = true
-	    let arr = room.game.render().map(v => {
-	    return {
-	    X: '❌',
-	    O: '⭕',
-	    1: '1️⃣',
-	    2: '2️⃣',
-	    3: '3️⃣',
-	    4: '4️⃣',
-	    5: '5️⃣',
-	    6: '6️⃣',
-	    7: '7️⃣',
-	    8: '8️⃣',
-	    9: '9️⃣',
-	    }[v]
-	    })
-	    if (isSurrender) {
-	    room.game._currentTurn = m.sender === room.game.playerX
-	    isWin = true
-	    }
-	    let winner = isSurrender ? room.game.currentTurn : room.game.winner
-	    let str = `Room ID: ${room.id}
+        this.game = this.game ? this.game : {}
+        let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
+        if (room) {
+        let ok
+        let isWin = !1
+        let isTie = !1
+        let isSurrender = !1
+        // m.reply(`[DEBUG]\n${parseInt(m.text)}`)
+        if (!/^([1-9]|(me)?nyerah|surr?ender|off|skip)$/i.test(m.text)) return
+        isSurrender = !/^[1-9]$/.test(m.text)
+        if (m.sender !== room.game.currentTurn) { // nek wayahku
+        if (!isSurrender) return !0
+        }
+        if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
+        m.reply({
+        '-3': 'Game telah berakhir',
+        '-2': 'Invalid',
+        '-1': 'Posisi Invalid',
+        0: 'Posisi Invalid',
+        }[ok])
+        return !0
+        }
+        if (m.sender === room.game.winner) isWin = true
+        else if (room.game.board === 511) isTie = true
+        let arr = room.game.render().map(v => {
+        return {
+        X: '❌',
+        O: '⭕',
+        1: '1️⃣',
+        2: '2️⃣',
+        3: '3️⃣',
+        4: '4️⃣',
+        5: '5️⃣',
+        6: '6️⃣',
+        7: '7️⃣',
+        8: '8️⃣',
+        9: '9️⃣',
+        }[v]
+        })
+        if (isSurrender) {
+        room.game._currentTurn = m.sender === room.game.playerX
+        isWin = true
+        }
+        let winner = isSurrender ? room.game.currentTurn : room.game.winner
+        let str = `Room ID: ${room.id}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
@@ -387,90 +387,90 @@ ${isWin ? `@${winner.split('@')[0]} Menang!` : isTie ? `Game berakhir` : `Gilira
 ⭕: @${room.game.playerO.split('@')[0]}
 
 Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
-	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
-	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
-	    if (room.x !== room.o) await zxyn.sendText(room.x, str, m, { mentions: parseMention(str) } )
-	    await zxyn.sendText(room.o, str, m, { mentions: parseMention(str) } )
-	    if (isTie || isWin) {
-	    delete this.game[room.id]
-	    }
-	    }
+        if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
+        room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
+        if (room.x !== room.o) await zxyn.sendText(room.x, str, m, { mentions: parseMention(str) } )
+        await zxyn.sendText(room.o, str, m, { mentions: parseMention(str) } )
+        if (isTie || isWin) {
+        delete this.game[room.id]
+        }
+        }
 
         //Suit PvP
-	    this.suit = this.suit ? this.suit : {}
-	    let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
-	    if (roof) {
-	    let win = ''
-	    let tie = false
-	    if (m.sender == roof.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
-	    if (/^(tolak|gamau|nanti|n|ga(k.)?bisa)/i.test(m.text)) {
-	    zxyn.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} menolak suit, suit dibatalkan`, m)
-	    delete this.suit[roof.id]
-	    return !0
-	    }
-	    roof.status = 'play'
-	    roof.asal = m.chat
-	    clearTimeout(roof.waktu)
-	    //delete roof[roof.id].waktu
-	    zxyn.sendText(m.chat, `Suit telah dikirimkan ke chat
+        this.suit = this.suit ? this.suit : {}
+        let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
+        if (roof) {
+        let win = ''
+        let tie = false
+        if (m.sender == roof.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
+        if (/^(tolak|gamau|nanti|n|ga(k.)?bisa)/i.test(m.text)) {
+        zxyn.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} menolak suit, suit dibatalkan`, m)
+        delete this.suit[roof.id]
+        return !0
+        }
+        roof.status = 'play'
+        roof.asal = m.chat
+        clearTimeout(roof.waktu)
+        //delete roof[roof.id].waktu
+        zxyn.sendText(m.chat, `Suit telah dikirimkan ke chat
 
 @${roof.p.split`@`[0]} dan 
 @${roof.p2.split`@`[0]}
 
 Silahkan pilih suit di chat masing"
 klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
-	    if (!roof.pilih) zxyn.sendText(roof.p, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-	    if (!roof.pilih2) zxyn.sendText(roof.p2, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-	    roof.waktu_milih = setTimeout(() => {
-	    if (!roof.pilih && !roof.pilih2) zxyn.sendText(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
-	    else if (!roof.pilih || !roof.pilih2) {
-	    win = !roof.pilih ? roof.p2 : roof.p
-	    zxyn.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} tidak memilih suit, game berakhir`, m)
-	    }
-	    delete this.suit[roof.id]
-	    return !0
-	    }, roof.timeout)
-	    }
-	    let jwb = m.sender == roof.p
-	    let jwb2 = m.sender == roof.p2
-	    let g = /gunting/i
-	    let b = /batu/i
-	    let k = /kertas/i
-	    let reg = /^(gunting|batu|kertas)/i
-	    if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
-	    roof.pilih = reg.exec(m.text.toLowerCase())[0]
-	    roof.text = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
-	    if (!roof.pilih2) zxyn.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-	    }
-	    if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
-	    roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
-	    roof.text2 = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
-	    if (!roof.pilih) zxyn.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-	    }
-	    let stage = roof.pilih
-	    let stage2 = roof.pilih2
-	    if (roof.pilih && roof.pilih2) {
-	    clearTimeout(roof.waktu_milih)
-	    if (b.test(stage) && g.test(stage2)) win = roof.p
-	    else if (b.test(stage) && k.test(stage2)) win = roof.p2
-	    else if (g.test(stage) && k.test(stage2)) win = roof.p
-	    else if (g.test(stage) && b.test(stage2)) win = roof.p2
-	    else if (k.test(stage) && b.test(stage2)) win = roof.p
-	    else if (k.test(stage) && g.test(stage2)) win = roof.p2
-	    else if (stage == stage2) tie = true
-	    zxyn.sendText(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
+        if (!roof.pilih) zxyn.sendText(roof.p, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
+        if (!roof.pilih2) zxyn.sendText(roof.p2, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
+        roof.waktu_milih = setTimeout(() => {
+        if (!roof.pilih && !roof.pilih2) zxyn.sendText(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
+        else if (!roof.pilih || !roof.pilih2) {
+        win = !roof.pilih ? roof.p2 : roof.p
+        zxyn.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} tidak memilih suit, game berakhir`, m)
+        }
+        delete this.suit[roof.id]
+        return !0
+        }, roof.timeout)
+        }
+        let jwb = m.sender == roof.p
+        let jwb2 = m.sender == roof.p2
+        let g = /gunting/i
+        let b = /batu/i
+        let k = /kertas/i
+        let reg = /^(gunting|batu|kertas)/i
+        if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
+        roof.pilih = reg.exec(m.text.toLowerCase())[0]
+        roof.text = m.text
+        m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
+        if (!roof.pilih2) zxyn.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+        }
+        if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
+        roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
+        roof.text2 = m.text
+        m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+        if (!roof.pilih) zxyn.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+        }
+        let stage = roof.pilih
+        let stage2 = roof.pilih2
+        if (roof.pilih && roof.pilih2) {
+        clearTimeout(roof.waktu_milih)
+        if (b.test(stage) && g.test(stage2)) win = roof.p
+        else if (b.test(stage) && k.test(stage2)) win = roof.p2
+        else if (g.test(stage) && k.test(stage2)) win = roof.p
+        else if (g.test(stage) && b.test(stage2)) win = roof.p2
+        else if (k.test(stage) && b.test(stage2)) win = roof.p
+        else if (k.test(stage) && g.test(stage2)) win = roof.p2
+        else if (stage == stage2) tie = true
+        zxyn.sendText(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
 
 @${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Menang \n` : ` Kalah \n`}
 @${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Menang \n` : ` Kalah \n`}
 `.trim(), m, { mentions: [roof.p, roof.p2] })
-	    delete this.suit[roof.id]
-	    }
-	    }
-	    
-	    let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
-	    for (let jid of mentionUser) {
+        delete this.suit[roof.id]
+        }
+        }
+        
+        let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
+        for (let jid of mentionUser) {
             let user = global.db.data.users[jid]
             if (!user) continue
             let afkTime = user.afkTime
@@ -492,15 +492,15 @@ Selama ${clockString(new Date - user.afkTime)}
             user.afkTime = -1
             user.afkReason = ''
         }
-	    
+        
         switch(command) {
-	    case 'afk': {
+        case 'afk': {
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
                 m.reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
             }
-            break	
+            break   
         case 'ttc': case 'ttt': case 'tictactoe': {
             let TicTacToe = require("./lib/tictactoe")
             this.game = this.game ? this.game : {}
@@ -571,8 +571,8 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             let poin_lose = 10
             let timeout = 60000
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
-	    if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
-            if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
+        if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
+            if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${O W N E R[1]}`, m.chat, { mentions: [O W N E R[1] + '@s.whatsapp.net'] })
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`
             let id = 'suit_' + new Date() * 1
             let caption = `_*SUIT PvP*_
@@ -593,7 +593,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             }
             break
-	    
+        
             case 'sc': {
                 anu = `*Base Ori : Dika Ardnt*
 https://github.com/DikaArdnt
@@ -621,7 +621,7 @@ let btn = [{
                      }
             break
             case 'chat': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'
                 if (args[0] === 'mute') {
                     zxyn.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
@@ -640,7 +640,7 @@ let btn = [{
                 }
             }
             break
-	    case 'family100': {
+        case 'family100': {
                 if ('family100'+m.chat in _family100) {
                     m.reply('Masih Ada Sesi Yang Belum Diselesaikan!')
                     throw false
@@ -737,14 +737,14 @@ let btn = [{
                     let result = anu[Math.floor(Math.random() * anu.length)]
                     zxyn.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, m).then(() => {
                     caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-		    caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
+            caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
                     })
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
                     zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
                     delete caklontong[m.sender.split('@')[0]]
-		    delete caklontong_desk[m.sender.split('@')[0]]
+            delete caklontong_desk[m.sender.split('@')[0]]
                     }
                 }
             }
@@ -796,7 +796,7 @@ let btn = [{
             }
             break
             case 'react': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 reactionMessage = {
                     react: {
                         text: args[0],
@@ -807,7 +807,7 @@ let btn = [{
             }
             break  
             case 'join': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!text) throw 'Masukkan Link Group!'
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw 'Link Invalid!'
                 m.reply(mess.wait)
@@ -816,63 +816,63 @@ let btn = [{
             }
             break
             case 'leave': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 await zxyn.groupLeave(m.chat).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
             }
             break
             case 'setexif': {
-               if (!isCreator) throw mess.owner
+               if (!isCreator) throw mess.O W N E R
                if (!text) throw `Example : ${prefix + command} packname|author`
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
           m.reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
-	case 'kick': {
-		if (!m.isGroup) throw mess.group
+    case 'kick': {
+        if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
-	case 'add': {
-		if (!m.isGroup) throw mess.group
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
+    case 'add': {
+        if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
-	case 'promote': {
-		if (!m.isGroup) throw mess.group
+        let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
+    case 'promote': {
+        if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
-	case 'demote': {
-		if (!m.isGroup) throw mess.group
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
+    case 'demote': {
+        if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
         case 'block': {
-		if (!isCreator) throw mess.owner
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.updateBlockStatus(users, 'block').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
+        if (!isCreator) throw mess.O W N E R
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.updateBlockStatus(users, 'block').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
         case 'unblock': {
-		if (!isCreator) throw mess.owner
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await zxyn.updateBlockStatus(users, 'unblock').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
-	}
-	break
-	    case 'setname': case 'setsubject': {
+        if (!isCreator) throw mess.O W N E R
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+        await zxyn.updateBlockStatus(users, 'unblock').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+    }
+    break
+        case 'setname': case 'setsubject': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
@@ -889,7 +889,7 @@ let btn = [{
             }
             break
           case 'setppbot': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
@@ -937,23 +937,23 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                zxyn.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: participants.map(a => a.id) })
                }
                break
-	    case 'style': case 'styletext': {
-	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-		db.data.users[m.sender].limit -= 1 // -1 limit
-		let { styletext } = require('./lib/scraper')
-		if (!text) throw 'Masukkan Query text!'
+        case 'style': case 'styletext': {
+            if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+        db.data.users[m.sender].limit -= 1 // -1 limit
+        let { styletext } = require('./lib/scraper')
+        if (!text) throw 'Masukkan Query text!'
                 let anu = await styletext(text)
                 let teks = `Srtle Text From ${text}\n\n`
                 for (let i of anu) {
                     teks += `⭔ *${i.name}* : ${i.result}\n\n`
                 }
                 m.reply(teks)
-	    }
-	    break
+        }
+        break
                case 'vote': {
             if (!m.isGroup) throw mess.group
             if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
-            if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} Owner Ganteng*`
+            if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} O W N E R Ganteng*`
             m.reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
@@ -990,7 +990,7 @@ let buttonsVote = [
                 headerType: 1
             }
             zxyn.sendMessage(m.chat, buttonMessageVote)
-	    }
+        }
             break
                case 'upvote': {
             if (!m.isGroup) throw mess.group
@@ -1032,7 +1032,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 mentions: menvote
              }
             zxyn.sendMessage(m.chat, buttonMessageUpvote)
-	    }
+        }
              break
                 case 'devote': {
             if (!m.isGroup) throw mess.group
@@ -1074,7 +1074,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 mentions: menvote
             }
             zxyn.sendMessage(m.chat, buttonMessageDevote)
-	}
+    }
             break
                  
 case 'cekvote':
@@ -1105,12 +1105,12 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 `
 zxyn.sendTextWithMentions(m.chat, teks_vote, m)
 break
-		case 'deletevote': case'delvote': case 'hapusvote': {
+        case 'deletevote': case'delvote': case 'hapusvote': {
             if (!m.isGroup) throw mess.group
             if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
             delete vote[m.chat]
             m.reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
-	    }
+        }
             break
                case 'group': case 'grup': {
                 if (!m.isGroup) throw mess.group
@@ -1233,7 +1233,7 @@ break
             }
             break
             case 'bcgc': case 'bcgroup': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let getGroups = await zxyn.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
@@ -1243,7 +1243,7 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -1254,7 +1254,7 @@ break
                                 }, {
                                 quickReplyButton: {
                                     displayText: 'Donasi💰',
-                                    id: 'owner'
+                                    id: 'O W N E R'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1263,7 +1263,7 @@ break
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -1274,15 +1274,15 @@ break
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let anu = await store.chats.all().map(v => v.id)
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
-		for (let yoi of anu) {
-		    await sleep(1500)
-		    let btn = [{
+        for (let yoi of anu) {
+            await sleep(1500)
+            let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -1293,7 +1293,7 @@ break
                                 }, {
                                 quickReplyButton: {
                                     displayText: 'Donasi💰',
-                                    id: 'owner'
+                                    id: 'O W N E R'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1302,14 +1302,14 @@ break
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
                       zxyn.send5ButImg(yoi, txt, '© O S H A D A', global.thumb, btn)
-		}
-		m.reply('Sukses Broadcast')
+        }
+        m.reply('Sukses Broadcast')
             }
             break
             case 'infochat': {
@@ -1328,12 +1328,12 @@ break
             }
             break
             case 'q': case 'quoted': {
-		if (!m.quoted) return m.reply('Reply Pesannya!!')
-		let wokwol = await zxyn.serializeM(await m.getQuotedObj())
-		if (!wokwol.quoted) return m.reply('Pesan Yang anda reply tidak mengandung reply')
-		await wokwol.quoted.copyNForward(m.chat, true)
+        if (!m.quoted) return m.reply('Reply Pesannya!!')
+        let wokwol = await zxyn.serializeM(await m.getQuotedObj())
+        if (!wokwol.quoted) return m.reply('Pesan Yang anda reply tidak mengandung reply')
+        await wokwol.quoted.copyNForward(m.chat, true)
             }
-	    break
+        break
             case 'listpc': {
                  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v.id)
                  let teks = `⬣ *LIST PERSONAL CHAT*\n\nTotal Chat : ${anu.length} Chat\n\n`
@@ -1349,7 +1349,7 @@ break
                  let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
                  for (let i of anu) {
                      let metadata = await zxyn.groupMetadata(i)
-                     teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *Owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Tidak diketahui'}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *O W N E R :* ${metadata.O W N E R !== undefined ? '@' + metadata.O W N E R.split`@`[0] : 'Tidak diketahui'}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  zxyn.sendTextWithMentions(m.chat, teks, m)
              }
@@ -1382,7 +1382,7 @@ break
                 let [teks1, teks2] = text.split`|`
                 if (!teks1) throw `Kirim/reply image/video dengan caption ${prefix + command} teks1|teks2`
                 if (!teks2) throw `Kirim/reply image/video dengan caption ${prefix + command} teks1|teks2`
-            	m.reply(mess.wait)
+                m.reply(mess.wait)
                 if (/image/.test(mime)) {
                     let media = await quoted.download()
                     let encmedia = await zxyn.sendImageAsSticker(m.chat, media, m, { packname: teks1, author: teks2 })
@@ -1412,47 +1412,47 @@ break
         }
         break
             case 'emojimix': {
-		let [emoji1, emoji2] = text.split`+`
-		if (!emoji1) throw `Example : ${prefix + command} 😅+🤔`
-		if (!emoji2) throw `Example : ${prefix + command} 😅+🤔`
-		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
-		for (let res of anu.results) {
-		    let encmedia = await zxyn.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
-		    await fs.unlinkSync(encmedia)
-		}
-	    }
-	    break
-	    case 'emojimix2': {
-	    if (!text) throw `Example : ${prefix + command} 😅`
-		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
-		for (let res of anu.results) {
-		    let encmedia = await zxyn.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
-		    await fs.unlinkSync(encmedia)
-		}
-	    }
-	    break
-	       case 'attp': case 'ttp': {
+        let [emoji1, emoji2] = text.split`+`
+        if (!emoji1) throw `Example : ${prefix + command} 😅+🤔`
+        if (!emoji2) throw `Example : ${prefix + command} 😅+🤔`
+        let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
+        for (let res of anu.results) {
+            let encmedia = await zxyn.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
+            await fs.unlinkSync(encmedia)
+        }
+        }
+        break
+        case 'emojimix2': {
+        if (!text) throw `Example : ${prefix + command} 😅`
+        let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
+        for (let res of anu.results) {
+            let encmedia = await zxyn.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
+            await fs.unlinkSync(encmedia)
+        }
+        }
+        break
+           case 'attp': case 'ttp': {
            if (!text) throw `Example : ${prefix + command} text`
            await zxyn.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'zxyn', 'morou', m, {asSticker: true})
 
          }
          break
-	       case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
-	        let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
-	        if (!/image/.test(mime)) throw respond
+           case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
+            let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
+            if (!/image/.test(mime)) throw respond
             if (!text) throw respond
-	        m.reply(mess.wait)
+            m.reply(mess.wait)
             atas = text.split('|')[0] ? text.split('|')[0] : '-'
             bawah = text.split('|')[1] ? text.split('|')[1] : '-'
-	        let dwnld = await quoted.download()
-	        let { floNime } = require('./lib/uploader')
-	        let fatGans = await floNime(dwnld)
-	        let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
-	        let FaTiH = await zxyn.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
-	        await fs.unlinkSync(FaTiH)
+            let dwnld = await quoted.download()
+            let { floNime } = require('./lib/uploader')
+            let fatGans = await floNime(dwnld)
+            let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
+            let FaTiH = await zxyn.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
+            await fs.unlinkSync(FaTiH)
             }
-	       break     
-	        case 'simih': case 'simisimi': {
+           break     
+            case 'simih': case 'simisimi': {
             if (!text) throw `Example : ${prefix + command} text`
             hm = await fetchJson(api('zenz', '/api/simisimi', { text : text }, 'apikey'))
             m.reply(hm.result.message)
@@ -1473,11 +1473,11 @@ break
                 })
             }
             break
-	        case 'tomp4': case 'tovideo': {
+            case 'tomp4': case 'tovideo': {
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
                 m.reply(mess.wait)
-		let { webp2mp4File } = require('./lib/uploader')
+        let { webp2mp4File } = require('./lib/uploader')
                 let media = await zxyn.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
                 await zxyn.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
@@ -1519,16 +1519,16 @@ break
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
                 m.reply(mess.wait)
-		let { webp2mp4File } = require('./lib/uploader')
+        let { webp2mp4File } = require('./lib/uploader')
                 let media = await zxyn.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
                 await zxyn.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
                 await fs.unlinkSync(media)
             }
             break
-	        case 'tourl': {
+            case 'tourl': {
                 m.reply(mess.wait)
-		let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+        let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
                 let media = await zxyn.downloadAndSaveMediaMessage(quoted)
                 if (/image/.test(mime)) {
                     let anu = await TelegraPh(media)
@@ -1541,35 +1541,35 @@ break
             }
             break
             case 'imagenobg': case 'removebg': case 'remove-bg': {
-	    if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-	    if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-	    if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-	    let remobg = require('remove.bg')
-	    let apirnobg = ['q61faXzzR5zNU6cvcrwtUkRU','S258diZhcuFJooAtHTaPEn4T','5LjfCVAp4vVNYiTjq9mXJWHF','aT7ibfUsGSwFyjaPZ9eoJc61','BY63t7Vx2tS68YZFY6AJ4HHF','5Gdq1sSWSeyZzPMHqz7ENfi8','86h6d6u4AXrst4BVMD9dzdGZ','xp8pSDavAgfE5XScqXo9UKHF','dWbCoCb3TacCP93imNEcPxcL']
-	    let apinobg = apirnobg[Math.floor(Math.random() * apirnobg.length)]
-	    hmm = await './src/remobg-'+getRandom('')
-	    localFile = await zxyn.downloadAndSaveMediaMessage(quoted, hmm)
-	    outputFile = await './src/hremo-'+getRandom('.png')
-	    m.reply(mess.wait)
-	    remobg.removeBackgroundFromImageFile({
-	      path: localFile,
-	      apiKey: apinobg,
-	      size: "regular",
-	      type: "auto",
-	      scale: "100%",
-	      outputFile 
-	    }).then(async result => {
-	    zxyn.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
-	    await fs.unlinkSync(localFile)
-	    await fs.unlinkSync(outputFile)
-	    })
-	    }
-	    break
-	    case 'yts': case 'ytsearch': {
+        if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
+        if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
+        if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
+        let remobg = require('remove.bg')
+        let apirnobg = ['q61faXzzR5zNU6cvcrwtUkRU','S258diZhcuFJooAtHTaPEn4T','5LjfCVAp4vVNYiTjq9mXJWHF','aT7ibfUsGSwFyjaPZ9eoJc61','BY63t7Vx2tS68YZFY6AJ4HHF','5Gdq1sSWSeyZzPMHqz7ENfi8','86h6d6u4AXrst4BVMD9dzdGZ','xp8pSDavAgfE5XScqXo9UKHF','dWbCoCb3TacCP93imNEcPxcL']
+        let apinobg = apirnobg[Math.floor(Math.random() * apirnobg.length)]
+        hmm = await './src/remobg-'+getRandom('')
+        localFile = await zxyn.downloadAndSaveMediaMessage(quoted, hmm)
+        outputFile = await './src/hremo-'+getRandom('.png')
+        m.reply(mess.wait)
+        remobg.removeBackgroundFromImageFile({
+          path: localFile,
+          apiKey: apinobg,
+          size: "regular",
+          type: "auto",
+          scale: "100%",
+          outputFile 
+        }).then(async result => {
+        zxyn.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
+        await fs.unlinkSync(localFile)
+        await fs.unlinkSync(outputFile)
+        })
+        }
+        break
+        case 'yts': case 'ytsearch': {
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
                 let search = await yts(text)
-                let teks = 'Owner Search\n\n Result From '+text+'\n\n'
+                let teks = 'O W N E R Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
                     teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
@@ -1613,7 +1613,7 @@ break
         })
         }
         break
-	    case 'play': case 'ytplay': case 'song': case 'ytsaudio': {
+        case 'play': case 'ytplay': case 'song': case 'ytsaudio': {
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -1642,9 +1642,9 @@ break
                 zxyn.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'ytmp3': case 'ytaudio': {
+        case 'ytmp3': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://Owner.com/watch?v=PtFMh6Tccag%27 128kbps`
+                if (!text) throw `Example : ${prefix + command} https://O W N E R.com/watch?v=PtFMh6Tccag%27 128kbps`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
@@ -1654,19 +1654,19 @@ break
             break
             case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://Owner.com/watch?v=PtFMh6Tccag%27 360p`
+                if (!text) throw `Example : ${prefix + command} https://O W N E R.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
                 zxyn.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-	    case 'getmusic': {
+        case 'getmusic': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) return m.reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?Owner\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+        let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?O W N E R\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
@@ -1680,7 +1680,7 @@ break
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) return m.reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?Owner\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?O W N E R\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
@@ -1690,7 +1690,7 @@ break
             break
             case 'pinterest': {
                 m.reply(mess.wait)
-		let { pinterest } = require('./lib/scraper')
+        let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
                 zxyn.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
@@ -1701,14 +1701,14 @@ break
                 zxyn.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generate Random ' + command }, { quoted: m })
             }
             break
-	    case 'couple': {
+        case 'couple': {
                 m.reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
                 zxyn.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: m })
                 zxyn.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
             }
-	    break
+        break
             case 'coffe': case 'kopi': {
             let buttons = [
                     {buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
@@ -1725,10 +1725,10 @@ break
             break
             case 'wallpaper': {
                 if (!text) throw 'Masukkan Query Title'
-		let { wallpaper } = require('./lib/scraper')
+        let { wallpaper } = require('./lib/scraper')
                 anu = await wallpaper(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-		let buttons = [
+        let buttons = [
                     {buttonId: `wallpaper ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
                 ]
                 let buttonMessage = {
@@ -1743,7 +1743,7 @@ break
             break
             case 'wikimedia': {
                 if (!text) throw 'Masukkan Query Title'
-		let { wikimedia } = require('./lib/scraper')
+        let { wikimedia } = require('./lib/scraper')
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
@@ -1760,7 +1760,7 @@ break
             }
             break
             case 'quotesanime': case 'quoteanime': {
-		let { quotesAnime } = require('./lib/scraper')
+        let { quotesAnime } = require('./lib/scraper')
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
@@ -1775,7 +1775,7 @@ break
                 zxyn.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	        case 'motivasi': case 'dilanquote': case 'bucinquote': case 'katasenja': case 'puisi': {
+            case 'motivasi': case 'dilanquote': case 'bucinquote': case 'katasenja': case 'puisi': {
                 let anu = await fetchJson(api('zenz', '/api/'+command, {}, 'apikey'))
                 let buttons = [
                     {buttonId: `motivasi`, buttonText: {displayText: 'Next'}, type: 1}
@@ -1793,9 +1793,9 @@ break
                 if (!text) throw `Example : ${prefix + command} text`
                 m.reply(mess.wait)
                 zxyn.sendMessage(m.chat, { image: { url: api('zenz', '/textpro/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
-	    }
+        }
             break
-	    case 'shadow': case 'romantic': case 'smoke': case 'burnpapper': case 'naruto': case 'lovemsg': case 'grassmsg': case 'lovetext': case 'coffecup': case 'butterfly': case 'harrypotter': case 'retrolol': {
+        case 'shadow': case 'romantic': case 'smoke': case 'burnpapper': case 'naruto': case 'lovemsg': case 'grassmsg': case 'lovetext': case 'coffecup': case 'butterfly': case 'harrypotter': case 'retrolol': {
                 if (!text) throw 'No Query Text'
                 m.reply(mess.wait)
                 zxyn.sendMessage(m.chat, { image: { url: api('zenz', '/photooxy/' + command, { text: text }, 'apikey') }, caption: `Photo Oxy ${command}` }, { quoted: m })
@@ -1807,7 +1807,7 @@ break
                 zxyn.sendMessage(m.chat, { image: { url: api('zenz', '/ephoto/' + command, { text: text }, 'apikey') }, caption: `Ephoto ${command}` }, { quoted: m })
             }
             break
-	    case 'nomerhoki': case 'nomorhoki': {
+        case 'nomerhoki': case 'nomorhoki': {
                 if (!Number(text)) throw `Example : ${prefix + command} 6288292024190`
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return m.reply(anu.message)
@@ -2070,8 +2070,8 @@ break
                 zxyn.sendText(m.chat, `⭔ *Hasil :* ${anu.message}`, m)
             }
             break
-	    case 'stalker': case 'stalk': {
-		if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply('Limit Harian Anda Telah Habis')
+        case 'stalker': case 'stalk': {
+        if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply('Limit Harian Anda Telah Habis')
                 if (!text) return m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
                 let [type, id, zone] = args
                 if (type.toLowerCase() == 'ff') {
@@ -2079,50 +2079,50 @@ break
                     let anu = await fetchJson(api('zenz', '/api/nickff', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'ml') {
                     if (!id) throw `No Query id, Example : ${prefix + command} ml 214885010 2253`
                     if (!zone) throw `No Query id, Example : ${prefix + command} ml 214885010 2253`
                     let anu = await fetchJson(api('zenz', '/api/nickml', { apikey: global.APIKeys[global.APIs['zenz']], query: id, query2: zone }))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`ID : ${anu.result.gameId}\nZone : ${anu.result.zoneId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'aov') {
                     if (!id) throw `No Query id, Example ${prefix + command} aov 293306941441181`
                     let anu = await fetchJson(api('zenz', '/api/nickaov', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'cod') {
                     if (!id) throw `No Query id, Example ${prefix + command} cod 6290150021186841472`
                     let anu = await fetchJson(api('zenz', '/api/nickcod', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'pb') {
                     if (!id) throw `No Query id, Example ${prefix + command} pb riio46`
                     let anu = await fetchJson(api('zenz', '/api/nickpb', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'ig') {
                     if (!id) throw `No Query username, Example : ${prefix + command} ig cak_haho`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
                     if (anu.status == false) return m.reply(anu.result.message)
                     zxyn.sendMedia(m.chat, anu.caption.profile_hd, '', `⭔ Full Name : ${anu.caption.full_name}\n⭔ User Name : ${anu.caption.user_name}\n⭔ ID ${anu.caption.user_id}\n⭔ Followers : ${anu.caption.followers}\n⭔ Following : ${anu.caption.following}\n⭔ Bussines : ${anu.caption.bussines}\n⭔ Profesional : ${anu.caption.profesional}\n⭔ Verified : ${anu.caption.verified}\n⭔ Private : ${anu.caption.private}\n⭔ Bio : ${anu.caption.biography}\n⭔ Bio Url : ${anu.caption.bio_url}`, m)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'npm') {
                     if (!id) throw `No Query username, Example : ${prefix + command} npm scrape-primbon`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
                     if (anu.status == false) return m.reply(anu.result.message)
                     m.reply(`⭔ Name : ${anu.name}\n⭔ Version : ${Object.keys(anu.versions)}\n⭔ Created : ${tanggal(anu.time.created)}\n⭔ Modified : ${tanggal(anu.time.modified)}\n⭔ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n⭔ Description : ${anu.description}\n⭔ Homepage : ${anu.homepage}\n⭔ Keywords : ${anu.keywords}\n⭔ Author : ${anu.author.name}\n⭔ License : ${anu.license}\n⭔ Readme : ${anu.readme}`)
-		    db.data.users[m.sender].limit -= 1
+            db.data.users[m.sender].limit -= 1
                 } else {
                     m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
                 }
             }
             break
-	        case 'tiktok': case 'tiktoknowm': {
+            case 'tiktok': case 'tiktoknowm': {
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
@@ -2176,7 +2176,7 @@ break
                 zxyn.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
-	        case 'instagram': case 'ig': case 'igdl': {
+            case 'instagram': case 'ig': case 'igdl': {
                 if (!text) throw 'No Query Url!'
                 m.reply(mess.wait)
                 if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
@@ -2204,7 +2204,7 @@ break
                 zxyn.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
             }
             break
-	        case 'twitdl': case 'twitter': {
+            case 'twitdl': case 'twitter': {
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
@@ -2229,7 +2229,7 @@ break
                     {buttonId: `twitter ${text}`, buttonText: {displayText: '► Video'}, type: 1}
                 ]
                 let buttonMessage = {
-		    image: { url: anu.result.thumb },
+            image: { url: anu.result.thumb },
                     caption: util.format(anu.result),
                     footer: 'Press The Button Below',
                     buttons: buttons,
@@ -2239,14 +2239,14 @@ break
                 zxyn.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
             }
             break
-	        case 'fbdl': case 'fb': case 'facebook': {
+            case 'fbdl': case 'fb': case 'facebook': {
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
                 zxyn.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `⭔ Title : ${anu.result.title}`}, { quoted: m })
             }
             break
-	        case 'pindl': case 'pinterestdl': {
+            case 'pindl': case 'pinterestdl': {
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/pinterestdl', { url: text }, 'apikey'))
@@ -2254,17 +2254,17 @@ break
             }
             break
             case 'umma': case 'ummadl': {
-	        if (!text) throw `Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`
+            if (!text) throw `Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`
                 let { umma } = require('./lib) scraper')
-		let anu = await umma(isUrl(text)[0])
-		if (anu.type == 'video') {
-		    let buttons = [
+        let anu = await umma(isUrl(text)[0])
+        if (anu.type == 'video') {
+            let buttons = [
                         {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '♫ Audio'}, type: 1},
                         {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '► Video'}, type: 1}
                     ]
-		    let buttonMessage = {
-		        image: { url: anu.author.profilePic },
-			caption: `
+            let buttonMessage = {
+                image: { url: anu.author.profilePic },
+            caption: `
 ⭔ Title : ${anu.title}
 ⭔ Author : ${anu.author.name}
 ⭔ Like : ${anu.like}
@@ -2272,55 +2272,55 @@ break
 ⭔ Url : ${anu.media[0]}
 Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
 `,
-			footer: '© O S H A D A',
-			buttons,
-			headerType: 4
-		    }
-		    zxyn.sendMessage(m.chat, buttonMessage, { quoted: m })
-		} else if (anu.type == 'image') {
-		    anu.media.map(async (url) => {
-		        zxyn.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
-		    })
-		}
-	    }
-	    break
+            footer: '© O S H A D A',
+            buttons,
+            headerType: 4
+            }
+            zxyn.sendMessage(m.chat, buttonMessage, { quoted: m })
+        } else if (anu.type == 'image') {
+            anu.media.map(async (url) => {
+                zxyn.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
+            })
+        }
+        }
+        break
         case 'ringtone': {
-		if (!text) throw `Example : ${prefix + command} black rover`
+        if (!text) throw `Example : ${prefix + command} black rover`
         let { ringtone } = require('./lib/scraper')
-		let anu = await ringtone(text)
-		let result = anu[Math.floor(Math.random() * anu.length)]
-		zxyn.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
-	    }
-	    break
-		case 'iqra': {
-		oh = `Example : ${prefix + command} 3\n\nIQRA Yang tersedia : 1,2,3,4,5,6`
-		if (!text) throw oh
-		yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
-		zxyn.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-		}
-		break
-		case 'juzamma': {
-		if (args[0] === 'pdf') {
-		m.reply(mess.wait)
-		zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
-		} else if (args[0] === 'docx') {
-		m.reply(mess.wait)
-		zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
-		} else if (args[0] === 'pptx') {
-		m.reply(mess.wait)
-		zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
-		} else if (args[0] === 'xlsx') {
-		m.reply(mess.wait)
-		zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
-		} else {
-		m.reply(`Mau format apa ? Example : ${prefix + command} pdf
+        let anu = await ringtone(text)
+        let result = anu[Math.floor(Math.random() * anu.length)]
+        zxyn.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
+        }
+        break
+        case 'iqra': {
+        oh = `Example : ${prefix + command} 3\n\nIQRA Yang tersedia : 1,2,3,4,5,6`
+        if (!text) throw oh
+        yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
+        zxyn.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+        }
+        break
+        case 'juzamma': {
+        if (args[0] === 'pdf') {
+        m.reply(mess.wait)
+        zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
+        } else if (args[0] === 'docx') {
+        m.reply(mess.wait)
+        zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
+        } else if (args[0] === 'pptx') {
+        m.reply(mess.wait)
+        zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
+        } else if (args[0] === 'xlsx') {
+        m.reply(mess.wait)
+        zxyn.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
+        } else {
+        m.reply(`Mau format apa ? Example : ${prefix + command} pdf
 
 Format yang tersedia : pdf, docx, pptx, xlsx`)
-		}
-		}
-		break
-		case 'hadits': case 'hadis': case 'hadist': {
-		if (!args[0]) throw `Contoh:
+        }
+        }
+        break
+        case 'hadits': case 'hadis': case 'hadist': {
+        if (!args[0]) throw `Contoh:
 ${prefix + command} bukhari 1
 ${prefix + command} abu-daud 1
 
@@ -2343,48 +2343,48 @@ malik
 1 - 1594
 muslim
 1 - 5362`
-		if (!args[1]) throw `Hadis yang ke berapa?\n\ncontoh:\n${prefix + command} muslim 1`
-		try {
-		let res = await fetchJson(`https://fatiharridho.herokuapp.com/api/islamic/hadits?list=${args[0]}`)
-		let { number, arab, id } = res.result.find(v => v.number == args[1])
-		m.reply(`No. ${number}
+        if (!args[1]) throw `Hadis yang ke berapa?\n\ncontoh:\n${prefix + command} muslim 1`
+        try {
+        let res = await fetchJson(`https://fatiharridho.herokuapp.com/api/islamic/hadits?list=${args[0]}`)
+        let { number, arab, id } = res.result.find(v => v.number == args[1])
+        m.reply(`No. ${number}
 
 ${arab}
 
 ${id}`)
-		} catch (e) {
-		m.reply(`Hadis tidak ditemukan !`)
-		}
-		}
-		break
-		case 'alquran': {
-		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
-		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
-		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-		let txt = `*Arab* : ${res.result.data.text.arab}
+        } catch (e) {
+        m.reply(`Hadis tidak ditemukan !`)
+        }
+        }
+        break
+        case 'alquran': {
+        if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
+        if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
+        let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
+        let txt = `*Arab* : ${res.result.data.text.arab}
 *English* : ${res.result.data.translation.en}
 *Indonesia* : ${res.result.data.translation.id}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		m.reply(txt)
-		zxyn.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
-		}
-		break
-		case 'tafsirsurah': {
-		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
-		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
-		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-		let txt = `「 *Tafsir Surah*  」
+        m.reply(txt)
+        zxyn.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
+        }
+        break
+        case 'tafsirsurah': {
+        if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
+        if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
+        let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
+        let txt = `「 *Tafsir Surah*  」
 
 *Pendek* : ${res.result.data.tafsir.id.short}
 
 *Panjang* : ${res.result.data.tafsir.id.long}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		m.reply(txt)
-		}
-		break
-		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
+        m.reply(txt)
+        }
+        break
+           case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
                 try {
                 let set
                 if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
@@ -2449,7 +2449,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
             }
             break
             case 'lockcmd': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 if (!m.quoted) throw 'Reply Pesan!'
                 if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
                 let hash = m.quoted.fileSha256.toString('base64')
@@ -2480,30 +2480,30 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
             break
             case 'listmsg': {
                 let msgs = JSON.parse(fs.readFileSync('./src/database.json'))
-	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
-		let teks = '「 LIST DATABASE 」\n\n'
-		for (let i of seplit) {
-		    teks += `⬡ *Name :* ${i.nama}\n⬡ *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
-	        }
-	        m.reply(teks)
-	    }
-	    break
-            case 'delmsg': case 'deletemsg': {
-	        let msgs = global.db.data.database
-	        if (!(text.toLowerCase() in msgs)) return m.reply(`'${text}' tidak terdaftar didalam list pesan`)
-		delete msgs[text.toLowerCase()]
-		m.reply(`Berhasil menghapus '${text}' dari list pesan`)
+            let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
+        let teks = '「 LIST DATABASE 」\n\n'
+        for (let i of seplit) {
+            teks += `⬡ *Name :* ${i.nama}\n⬡ *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
             }
-	    break
-	    case 'anonymous': {
+            m.reply(teks)
+        }
+        break
+            case 'delmsg': case 'deletemsg': {
+            let msgs = global.db.data.database
+            if (!(text.toLowerCase() in msgs)) return m.reply(`'${text}' tidak terdaftar didalam list pesan`)
+        delete msgs[text.toLowerCase()]
+        m.reply(`Berhasil menghapus '${text}' dari list pesan`)
+            }
+        break
+        case 'anonymous': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
-				this.anonymous = this.anonymous ? this.anonymous : {}
-				let buttons = [
+                this.anonymous = this.anonymous ? this.anonymous : {}
+                let buttons = [
                     { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
                 ]
                 zxyn.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await zxyn.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, '© O S H A D A', m)
             }
-			break
+            break
             case 'keluar': case 'leave': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
@@ -2608,13 +2608,13 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 break
             }
             case 'public': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 zxyn.public = true
                 m.reply('Sukse Change To Public Usage')
             }
             break
             case 'self': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator) throw mess.O W N E R
                 zxyn.public = false
                 m.reply('Sukses Change To Self Usage')
             }
@@ -2623,7 +2623,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
-			        return cpu
+                    return cpu
                 })
                 const cpu = cpus.reduce((last, cpu, _, { length }) => {
                     last.total += cpu.total
@@ -2638,11 +2638,11 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     speed: 0,
                     total: 0,
                     times: {
-			            user: 0,
-			            nice: 0,
-			            sys: 0,
-			            idle: 0,
-			            irq: 0
+                        user: 0,
+                        nice: 0,
+                        sys: 0,
+                        idle: 0,
+                        irq: 0
                 }
                 })
                 let timestamp = speed()
@@ -2683,8 +2683,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
-            case 'owner': case 'creator': {
-                zxyn.sendContact(m.chat, global.owner, m)
+            case 'O W N E R': case 'creator': {
+                zxyn.sendContact(m.chat, global.O W N E R, m)
             }
             break
             case 'playstore': {
@@ -2802,7 +2802,7 @@ let capt = `⭔ Title: ${judul}
             }
             break
             case 'setmenu': {
-            if (!isCreator) throw mess.owner
+            if (!isCreator) throw mess.O W N E R
             let setbot = db.data.settings[botNumber]
                if (args[0] === 'templateImage'){
                 setbot.templateImage = true
@@ -2852,13 +2852,13 @@ let capt = `⭔ Title: ${judul}
                 ]
                 },
                 ]
-                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© O S H A D A', `Hello Owner !`, `Click Here`, sections, m)
+                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© O S H A D A', `Hello O W N E R !`, `Click Here`, sections, m)
                 }
             }
             break
 
 case 'sewa':
-if (!isCreator) return m.reply(mess.owner)
+if (!isCreator) return m.reply(mess.O W N E R)
 if (!q) return m.reply(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
 if (args[0] === 'add'){
 _sewa.addSewaGroup(from, args[1], sewa)
@@ -2950,142 +2950,142 @@ break
 case 'command':{
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `${ucapanWaktu} ${pushname}\n\nJika Kamu Menemukan Kesalahan Jangan Nanya Ke Owner, Mungkin Itu gara² Lu Sendiri\n`,
+                    title: `${ucapanWaktu} ${pushname}\n\nJika Kamu Menemukan Kesalahan Jangan Nanya Ke O W N E R, Mungkin Itu gara² Lu Sendiri\n`,
                     description: "*Klik Tombol Dibawah Untuk Melihat Menu Yang Tersedia👇*",
                     buttonText: "KLIK DISINI",
                     footerText: "O S H A D A",
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "All Menu Bot",
-								"rows": [
-									{
-										"title": "All Menu",
-										"description": "Menampikan Semua Menu",
-										"rowId": `${prefix}allmenu`
-									}
-								]
-							},
-							{
-								"title": "List Menu Bot",
-								"rows": [
-									{
-										"title": "Owner Menu",
-										"description": "Menampilkan Owner Menu",
-										"rowId": `${prefix}ownermenu`
-									},
-									{
-										"title": "Group Menu",
-										"description": "Menampilkan Group Menu",
-										"rowId": `${prefix}groupmenu`
-									},
-									{
-										"title": "Webzone Menu",
-										"description": "Menampilkan Webzone Menu",
-										"rowId": `${prefix}webzonemenu`
-									},
-									{
-										"title": "Download Menu",
-										"description": "Menampilkan Download Menu",
-										"rowId": `${prefix}downloadermenu`
-									},
-									{
-										"title": "Search Menu",
-										"description": "Menampilkan Search Menu",
-										"rowId": `${prefix}searchmenu`
-									},
-									{
-										"title": "Random Menu",
-										"description": "Menampilkan Random Menu",
-										"rowId": `${prefix}randommenu`
-									},
-									{
-										"title": "Text Pro Menu",
-										"description": "Menampilkan Text Pro Menu",
-										"rowId": `${prefix}textpromenu`
-									},
-									{
-										"title": "Photo Oxy Menu",
-										"description": "Menampilkan Photo Oxy Menu",
-										"rowId": `${prefix}photooxymenu`
-									},
-									{
-										"title": "Ephoto Menu",
-										"description": "Menampilkan Ephoto Menu",
-										"rowId": `${prefix}ephotomenu`
-									},
-									{
-										"title": "Fun Menu",
-										"description": "Menampilkan Fun Menu",
-										"rowId": `${prefix}funmenu`
-									},
-									{
-										"title": "Primbon Menu",
-										"description": "Menampilkan Primbon Menu",
-										"rowId": `${prefix}primbonmenu`
-									},
-									{
-										"title": "Convert Menu",
-										"description": "Menampilkan Convert Menu",
-										"rowId": `${prefix}convertmenu`
-									},
-									{
-										"title": "Main Menu",
-										"description": "Menampilkan Main Menu",
-										"rowId": `${prefix}mainmenu`
-									},
-									{
-										"title": "Database Menu",
-										"description": "Menampilkan Database Menu",
-										"rowId": `${prefix}databasemenu`
-									},
-									{
-										"title": "Anonymous Menu",
-										"description": "Menampilkan Anonymous Menu",
-										"rowId": `${prefix}anonymousmenu`
-									},
-									{
-										"title": "Islamic Menu",
-										"description": "Menampilkan Islamic Menu",
-										"rowId": `${prefix}islamicmenu`
-									},
-									{
-										"title": "Voice Changer",
-										"description": "Menampilkan Voice Changer Menu",
-										"rowId": `${prefix}voicechangermenu`
-									}
-										]
-										},
-							{
-								"title": "Creator👤",
-								"rows": [
-									{
-										"title": "Creator",
-										"description": "Menampilkan Nomor Creator",
-										"rowId": `${prefix}owner`
-									}
-								]
-							},
-							{
-								"title": "Sewabot🤖",
-								"rows": [
-									{
-										"title": "Sewabot",
-										"description": "Menampilkan List Sewabot",
-										"rowId": `${prefix}sewabot`
-									}
-								]
-							},
-							{
-								"title": "Thanks To👑",
-								"rows": [
-									{
-										"title": "Contributor",
-										"description": "Menampilkan Ungkapan Terima Kasih",
-										"rowId": `${prefix}contributor`
-									}
-								]
-							}
-						],
+                                "title": "All Menu Bot",
+                                "rows": [
+                                    {
+                                        "title": "All Menu",
+                                        "description": "Menampikan Semua Menu",
+                                        "rowId": `${prefix}allmenu`
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "List Menu Bot",
+                                "rows": [
+                                    {
+                                        "title": "O W N E R Menu",
+                                        "description": "Menampilkan O W N E R Menu",
+                                        "rowId": `${prefix}O W N E Rmenu`
+                                    },
+                                    {
+                                        "title": "Group Menu",
+                                        "description": "Menampilkan Group Menu",
+                                        "rowId": `${prefix}groupmenu`
+                                    },
+                                    {
+                                        "title": "Webzone Menu",
+                                        "description": "Menampilkan Webzone Menu",
+                                        "rowId": `${prefix}webzonemenu`
+                                    },
+                                    {
+                                        "title": "Download Menu",
+                                        "description": "Menampilkan Download Menu",
+                                        "rowId": `${prefix}downloadermenu`
+                                    },
+                                    {
+                                        "title": "Search Menu",
+                                        "description": "Menampilkan Search Menu",
+                                        "rowId": `${prefix}searchmenu`
+                                    },
+                                    {
+                                        "title": "Random Menu",
+                                        "description": "Menampilkan Random Menu",
+                                        "rowId": `${prefix}randommenu`
+                                    },
+                                    {
+                                        "title": "Text Pro Menu",
+                                        "description": "Menampilkan Text Pro Menu",
+                                        "rowId": `${prefix}textpromenu`
+                                    },
+                                    {
+                                        "title": "Photo Oxy Menu",
+                                        "description": "Menampilkan Photo Oxy Menu",
+                                        "rowId": `${prefix}photooxymenu`
+                                    },
+                                    {
+                                        "title": "Ephoto Menu",
+                                        "description": "Menampilkan Ephoto Menu",
+                                        "rowId": `${prefix}ephotomenu`
+                                    },
+                                    {
+                                        "title": "Fun Menu",
+                                        "description": "Menampilkan Fun Menu",
+                                        "rowId": `${prefix}funmenu`
+                                    },
+                                    {
+                                        "title": "Primbon Menu",
+                                        "description": "Menampilkan Primbon Menu",
+                                        "rowId": `${prefix}primbonmenu`
+                                    },
+                                    {
+                                        "title": "Convert Menu",
+                                        "description": "Menampilkan Convert Menu",
+                                        "rowId": `${prefix}convertmenu`
+                                    },
+                                    {
+                                        "title": "Main Menu",
+                                        "description": "Menampilkan Main Menu",
+                                        "rowId": `${prefix}mainmenu`
+                                    },
+                                    {
+                                        "title": "Database Menu",
+                                        "description": "Menampilkan Database Menu",
+                                        "rowId": `${prefix}databasemenu`
+                                    },
+                                    {
+                                        "title": "Anonymous Menu",
+                                        "description": "Menampilkan Anonymous Menu",
+                                        "rowId": `${prefix}anonymousmenu`
+                                    },
+                                    {
+                                        "title": "Islamic Menu",
+                                        "description": "Menampilkan Islamic Menu",
+                                        "rowId": `${prefix}islamicmenu`
+                                    },
+                                    {
+                                        "title": "Voice Changer",
+                                        "description": "Menampilkan Voice Changer Menu",
+                                        "rowId": `${prefix}voicechangermenu`
+                                    }
+                                        ]
+                                        },
+                            {
+                                "title": "Creator👤",
+                                "rows": [
+                                    {
+                                        "title": "Creator",
+                                        "description": "Menampilkan Nomor Creator",
+                                        "rowId": `${prefix}O W N E R`
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Sewabot🤖",
+                                "rows": [
+                                    {
+                                        "title": "Sewabot",
+                                        "description": "Menampilkan List Sewabot",
+                                        "rowId": `${prefix}sewabot`
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Thanks To👑",
+                                "rows": [
+                                    {
+                                        "title": "Contributor",
+                                        "description": "Menampilkan Ungkapan Terima Kasih",
+                                        "rowId": `${prefix}contributor`
+                                    }
+                                ]
+                            }
+                        ],
           listType: 1
                 }
             }), { userJid: m.chat, quoted: m })
@@ -3102,7 +3102,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3116,7 +3116,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 
 
-╭─❏ *『 OWNER MENU 』*
+╭─❏ *『 O W N E R MENU 』*
 │➪ ${prefix}sewa
 │➪ ${prefix}react [emoji]
 │➪ ${prefix}chat [option]
@@ -3335,7 +3335,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 ╭─❏ *『 MAIN MENU 』*
 │➪ ${prefix}ping
-│➪ ${prefix}owner
+│➪ ${prefix}O W N E R
 │➪ ${prefix}menu / ${prefix}help / ${prefix}?
 │➪ ${prefix}delete
 │➪ ${prefix}infochat
@@ -3383,7 +3383,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'Update Soon'
                                 }
                                 }, {
@@ -3398,8 +3398,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3421,7 +3421,7 @@ let btn = [{
                         }
                      }
             break
-case 'ownermenu': {
+case 'O W N E Rmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
 │ ➪ Name : ${pushname}
@@ -3430,7 +3430,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3444,7 +3444,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏
 
 
-╭─❏ *『 OWNER MENU 』*
+╭─❏ *『 O W N E R MENU 』*
 │➪ ${prefix}sewa
 │➪ ${prefix}react [emoji]
 │➪ ${prefix}chat [option]
@@ -3460,7 +3460,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'https://wa.me/+94775792013'
                                 }
                                 }, {
@@ -3475,8 +3475,8 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
@@ -3507,7 +3507,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3546,7 +3546,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3561,12 +3561,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3593,7 +3593,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3619,7 +3619,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3634,12 +3634,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3666,7 +3666,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3699,7 +3699,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3714,12 +3714,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3746,7 +3746,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3774,7 +3774,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3789,12 +3789,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3821,7 +3821,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3852,7 +3852,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3867,12 +3867,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3899,7 +3899,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3948,7 +3948,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -3963,12 +3963,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -3995,7 +3995,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4025,7 +4025,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4040,12 +4040,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4072,7 +4072,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4099,7 +4099,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4114,12 +4114,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4146,7 +4146,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4178,7 +4178,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4193,12 +4193,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4225,7 +4225,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4273,7 +4273,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4288,12 +4288,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4320,7 +4320,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4356,7 +4356,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4371,12 +4371,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4403,7 +4403,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4419,7 +4419,7 @@ anu = `${ucapanWaktu} ${pushname}
            
 ╭─❏ *『 MAIN MENU 』*
 │➪ ${prefix}ping
-│➪ ${prefix}owner
+│➪ ${prefix}O W N E R
 │➪ ${prefix}menu / ${prefix}help / ${prefix}?
 │➪ ${prefix}delete
 │➪ ${prefix}infochat
@@ -4431,7 +4431,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4446,12 +4446,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4478,7 +4478,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4504,7 +4504,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4519,12 +4519,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4551,7 +4551,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4573,7 +4573,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4588,12 +4588,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4620,7 +4620,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4643,7 +4643,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4658,12 +4658,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4690,7 +4690,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ O W N E R : ${global.namaO W N E R}
 │ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4719,7 +4719,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4734,12 +4734,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4758,11 +4758,11 @@ let btn = [{
                      }
             break
                    
-            case 'menu': case 'help': case '?': {
-                anu = `${ucapanWaktu} ${pushname}\n\nSaya ${global.namabot}, Bot Ini Adalah Beta Multi Device WhatsApp.\n\n${global.namabot} Adalah Hasil Recode ${global.namaowner} Menggunakan sc dari O S H A D A (YosaArdn).\n\nJika Kamu Menemukan Semacam Bug Atau Kesalahan Harap Lapor Ke Owner Agar Segera Di Perbaiki😁`
+            case 'menu': case 'help': case '?': case 'alive': {
+                anu = `${ucapanWaktu} ${pushname}\n\nSaya ${global.namabot}, Bot Ini Adalah Beta Multi Device WhatsApp.\n\n${global.namabot} Adalah Hasil Recode ${global.namaO W N E R} Menggunakan sc dari O S H A D A (YosaArdn).\n\nJika Kamu Menemukan Semacam Bug Atau Kesalahan Harap Lapor Ke O W N E R Agar Segera Di Perbaiki😁`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'Update Soon'
                                 }
                                 }, {
@@ -4777,12 +4777,12 @@ let btn = [{
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner👤',
-                                    id: 'owner'
+                                    displayText: 'O W N E R👤',
+                                    id: 'O W N E R'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4810,7 +4810,7 @@ anu = `╭─❏ *『 DONASI 』*
 *TERIMA KASIH BUAT YANG SUDAH MAU DONASI🤗*`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: '085822347348'
                                 }
                                 }, {
@@ -4834,7 +4834,7 @@ let btn = [{
                      }
             break
 case 'rules': {
-	anu = `*RULES*
+    anu = `*RULES*
 1. Jangan Pernah Spam Bot ❎
 2. Jangan Call Nomer Bot ❎
 3. Jangan Mengeksploitasi Bot ❎
@@ -4845,7 +4845,7 @@ Sanksi : *Warn/Soft Block*
 Ini`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4865,7 +4865,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4885,7 +4885,7 @@ let btn = [{
             break
 // Kalau Mau Nambahin Gpp Tapi Jangan Diubah Ya Anj
 case 'contributor': {
-	anu = `*THANKS TO :*
+    anu = `*THANKS TO :*
 
 •Adiwajshing 
 •Dika Ardnt 
@@ -4895,9 +4895,9 @@ case 'contributor': {
 •O S H A D A
 Penyedia Rest Api :
 https://zenzapis.xyz`
-	let btn = [{
+    let btn = [{
                                 urlButton: {
-                                    displayText: 'Owner📽️',
+                                    displayText: 'O W N E R📽️',
                                     url: 'wa.me/+94775792013'
                                 }
                                 }, {
@@ -4917,7 +4917,7 @@ https://zenzapis.xyz`
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Tampilkan Menu📚',
+                                    displayText: 'M E N U 📚',
                                     id: 'command'
                                 }
                             }]
@@ -4937,7 +4937,7 @@ https://zenzapis.xyz`
             break
             default:
                 if (budy.startsWith('=>')) {
-                    if (!isCreator) return m.reply(mess.owner)
+                    if (!isCreator) return m.reply(mess.O W N E R)
                     function Return(sul) {
                         sat = JSON.stringify(sul, null, 2)
                         bang = util.format(sat)
@@ -4954,7 +4954,7 @@ https://zenzapis.xyz`
                 }
 
                 if (budy.startsWith('>')) {
-                    if (!isCreator) return m.reply(mess.owner)
+                    if (!isCreator) return m.reply(mess.O W N E R)
                     try {
                         let evaled = await eval(budy.slice(2))
                         if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
@@ -4965,14 +4965,14 @@ https://zenzapis.xyz`
                 }
 
                 if (budy.startsWith('$')) {
-                    if (!isCreator) return m.reply(mess.owner)
+                    if (!isCreator) return m.reply(mess.O W N E R)
                     exec(budy.slice(2), (err, stdout) => {
                         if(err) return m.reply(err)
                         if (stdout) return m.reply(stdout)
                     })
                 }
-			
-		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
+            
+        if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
                     this.anonymous = this.anonymous ? this.anonymous : {}
                     let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
                     if (room) {
@@ -4990,14 +4990,14 @@ https://zenzapis.xyz`
                     }
                     return !0
                 }
-			
-		if (isCmd && budy.toLowerCase() != undefined) {
-		    if (m.chat.endsWith('broadcast')) return
-		    if (m.isBaileys) return
-		    let msgs = global.db.data.database
-		    if (!(budy.toLowerCase() in msgs)) return
-		    zxyn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
-		}
+            
+        if (isCmd && budy.toLowerCase() != undefined) {
+            if (m.chat.endsWith('broadcast')) return
+            if (m.isBaileys) return
+            let msgs = global.db.data.database
+            if (!(budy.toLowerCase() in msgs)) return
+            zxyn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+        }
         }
         
 
@@ -5009,8 +5009,8 @@ https://zenzapis.xyz`
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
-	fs.unwatchFile(file)
-	console.log(chalk.redBright(`Update ${__filename}`))
-	delete require.cache[file]
-	require(file)
+    fs.unwatchFile(file)
+    console.log(chalk.redBright(`Update ${__filename}`))
+    delete require.cache[file]
+    require(file)
 })
