@@ -1,6 +1,6 @@
 /**
-   * Recode By O S H A D A
-   * Recode back oleh O S H A D A
+   * Recode By ⛧ S A T H A N ⸸ 
+   * Recode back oleh ⛧ S A T H A N ⸸ 
    * Contact Me on wa.me/6285822347348
    * Follow https://github.com/Warikrr
    * Base Dika Ardnt
@@ -190,7 +190,7 @@ _sewa.expiredCheck(zxyn, sewa)
         let setting = global.db.data.settings[botNumber]
         if (new Date() * 1 - setting.status > 1000) {
         let uptime = await runtime(process.uptime())
-        await zxyn.setStatus(`${'©V I M U K T H I - O S H A D A | BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
+        await zxyn.setStatus(`${'©V I M U K T H I - ⛧ S A T H A N ⸸  | BOT ONLINE'} | Runtime : ${runtime(process.uptime())} `)
         setting.status = new Date() * 1
         }
     }
@@ -261,7 +261,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -279,7 +279,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -288,7 +288,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebakkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -298,7 +298,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             jawaban = caklontong[m.sender.split('@')[0]]
         deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete caklontong[m.sender.split('@')[0]]
         delete caklontong_desk[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
@@ -308,7 +308,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkalimat[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -317,7 +317,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklirik[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebaklirik[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -326,7 +326,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaktebakan[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© O S H A D A', m)
+                await zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -598,7 +598,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 anu = `*Base Ori : Dika Ardnt*
 https://github.com/DikaArdnt
 
-*Recode By : O S H A D A*
+*Recode By : ⛧ S A T H A N ⸸ *
 Update Soon`
 let btn = [{
                                 urlButton: {
@@ -608,15 +608,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '©O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '©⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '©O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '©⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '©O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '©⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '©O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '©⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '©O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '©⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
@@ -676,7 +676,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete tebaklagu[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'gambar') {
@@ -689,7 +689,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete tebakgambar[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kata') {
@@ -702,7 +702,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete tebakkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kalimat') {
@@ -715,7 +715,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete tebakkalimat[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lirik') {
@@ -728,7 +728,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete tebaklirik[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lontong') {
@@ -742,7 +742,7 @@ let btn = [{
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© O S H A D A', m)
+                    zxyn.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, '© ⛧ S A T H A N ⸸ ', m)
                     delete caklontong[m.sender.split('@')[0]]
             delete caklontong_desk[m.sender.split('@')[0]]
                     }
@@ -777,7 +777,7 @@ let btn = [{
             let buttons = [
                         { buttonId: 'jodohku', buttonText: { displayText: 'Jodohku' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, jawab, '© O S H A D A', m, {mentions: ments})
+                    await zxyn.sendButtonText(m.chat, buttons, jawab, '© ⛧ S A T H A N ⸸ ', m, {mentions: ments})
             }
             break
             case 'jadian': {
@@ -792,7 +792,7 @@ let btn = [{
             let buttons = [
                         { buttonId: 'jadian', buttonText: { displayText: 'Jodohku' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, jawab, '© O S H A D A', m, {mentions: menst})
+                    await zxyn.sendButtonText(m.chat, buttons, jawab, '© ⛧ S A T H A N ⸸ ', m, {mentions: menst})
             }
             break
             case 'react': {
@@ -985,7 +985,7 @@ let buttonsVote = [
 
             let buttonMessageVote = {
                 text: teks_vote,
-                footer: '© O S H A D A',
+                footer: '© ⛧ S A T H A N ⸸ ',
                 buttons: buttonsVote,
                 headerType: 1
             }
@@ -1026,7 +1026,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 
             let buttonMessageUpvote = {
                 text: teks_vote,
-                footer: '© O S H A D A',
+                footer: '© ⛧ S A T H A N ⸸ ',
                 buttons: buttonsUpvote,
                 headerType: 1,
                 mentions: menvote
@@ -1068,7 +1068,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 
             let buttonMessageDevote = {
                 text: teks_vote,
-                footer: '© O S H A D A',
+                footer: '© ⛧ S A T H A N ⸸ ',
                 buttons: buttonsDevote,
                 headerType: 1,
                 mentions: menvote
@@ -1125,7 +1125,7 @@ break
                         { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `Mode Group`, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `Mode Group`, '© ⛧ S A T H A N ⸸ ', m)
 
              }
             }
@@ -1143,7 +1143,7 @@ break
                         { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `Mode Edit Info`, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `Mode Edit Info`, '© ⛧ S A T H A N ⸸ ', m)
 
             }
             }
@@ -1165,7 +1165,7 @@ break
                         { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
                         { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `Mode Antilink`, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `Mode Antilink`, '© ⛧ S A T H A N ⸸ ', m)
                 }
              }
              break
@@ -1176,17 +1176,17 @@ break
                 if (args[0] === "on") {
                 if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = true
-                m.reply(`${'© O S H A D A'} telah di mute di group ini !`)
+                m.reply(`${'© ⛧ S A T H A N ⸸ '} telah di mute di group ini !`)
                 } else if (args[0] === "off") {
                 if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = false
-                m.reply(`${'© O S H A D A'} telah di unmute di group ini !`)
+                m.reply(`${'© ⛧ S A T H A N ⸸ '} telah di unmute di group ini !`)
                 } else {
                  let buttons = [
                         { buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
                         { buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `Mute Bot`, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `Mute Bot`, '© ⛧ S A T H A N ⸸ ', m)
                 }
              }
              break
@@ -1221,7 +1221,7 @@ break
                 ]
                 },
                 ]
-                zxyn.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, '© O S H A D A', `Hello Admin ${groupMetadata.subject}`, `Click Here`, sections, m)
+                zxyn.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, '© ⛧ S A T H A N ⸸ ', `Hello Admin ${groupMetadata.subject}`, `Click Here`, sections, m)
                 }
             }
             break
@@ -1268,7 +1268,7 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      zxyn.send5ButImg(i, txt, '© O S H A D A', global.thumb, btn)
+                      zxyn.send5ButImg(i, txt, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                     }
                 m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
@@ -1307,7 +1307,7 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      zxyn.send5ButImg(yoi, txt, '© O S H A D A', global.thumb, btn)
+                      zxyn.send5ButImg(yoi, txt, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
         }
         m.reply('Sukses Broadcast')
             }
@@ -1502,7 +1502,7 @@ break
             let media = await quoted.download()
             let { toAudio } = require('./lib/converter')
             let audio = await toAudio(media, 'mp4')
-            zxyn.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${'© O S H A D A'}.mp3`}, { quoted : m })
+            zxyn.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${'© ⛧ S A T H A N ⸸ '}.mp3`}, { quoted : m })
             }
             break
             case 'tovn': case 'toptt': {
@@ -1605,7 +1605,7 @@ break
                     caption: `*-------「 GIMAGE SEARCH 」-------*
 🤠 *Query* : ${text}
 🔗 *Media Url* : ${images}`,
-                    footer: '© O S H A D A',
+                    footer: '© ⛧ S A T H A N ⸸ ',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1635,7 +1635,7 @@ break
 ⭔ Channel : ${anu.author.url}
 ⭔ Description : ${anu.description}
 ⭔ Url : ${anu.url}`,
-                    footer: '© O S H A D A',
+                    footer: '© ⛧ S A T H A N ⸸ ',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1716,7 +1716,7 @@ break
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
                     caption: `☕ Random Coffe`,
-                    footer: '© O S H A D A',
+                    footer: '© ⛧ S A T H A N ⸸ ',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1734,7 +1734,7 @@ break
                 let buttonMessage = {
                     image: { url: result.image[0] },
                     caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-                    footer: '© O S H A D A',
+                    footer: '© ⛧ S A T H A N ⸸ ',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1752,7 +1752,7 @@ break
                 let buttonMessage = {
                     image: { url: result.image },
                     caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`,
-                    footer: '© O S H A D A',
+                    footer: '© ⛧ S A T H A N ⸸ ',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -2272,7 +2272,7 @@ break
 ⭔ Url : ${anu.media[0]}
 Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
 `,
-            footer: '© O S H A D A',
+            footer: '© ⛧ S A T H A N ⸸ ',
             buttons,
             headerType: 4
             }
@@ -2501,7 +2501,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 let buttons = [
                     { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
                 ]
-                zxyn.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await zxyn.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, '© O S H A D A', m)
+                zxyn.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await zxyn.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
             }
             break
             case 'keluar': case 'leave': {
@@ -2528,7 +2528,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                     throw false
                 }
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
@@ -2537,10 +2537,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await zxyn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -2558,7 +2558,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                 }
                 break
             }
@@ -2582,10 +2582,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await zxyn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -2603,7 +2603,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, '© O S H A D A', m)
+                    await zxyn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, '© ⛧ S A T H A N ⸸ ', m)
                 }
                 break
             }
@@ -2852,7 +2852,7 @@ let capt = `⭔ Title: ${judul}
                 ]
                 },
                 ]
-                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© O S H A D A', `Hello owner !`, `Click Here`, sections, m)
+                zxyn.sendListMsg(m.chat, `Please select the menu you want to change!`, '© ⛧ S A T H A N ⸸ ', `Hello owner !`, `Click Here`, sections, m)
                 }
             }
             break
@@ -2923,15 +2923,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
             break
 case 'dana': {
@@ -2953,7 +2953,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     title: `${ucapanWaktu} ${pushname}\n\nJika Kamu Menemukan Kesalahan Jangan Nanya Ke owner, Mungkin Itu gara² Lu Sendiri\n`,
                     description: "*Klik Tombol Dibawah Untuk Melihat Menu Yang Tersedia👇*",
                     buttonText: "KLIK DISINI",
-                    footerText: "O S H A D A",
+                    footerText: "⛧ S A T H A N ⸸ ",
                     listType: "SINGLE_SELECT",
                     sections: [{
                                 "title": "All Menu Bot",
@@ -3096,290 +3096,290 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 case 'allmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 owner MENU 』*
-│➪ ${prefix}sewa
-│➪ ${prefix}react [emoji]
-│➪ ${prefix}chat [option]
-│➪ ${prefix}join [link]
-│➪ ${prefix}leave
-│➪ ${prefix}block @user
-│➪ ${prefix}unblock @user
-│➪ ${prefix}bcgroup [text]
-│➪ ${prefix}bcall [text]
-│➪ ${prefix}setppbot [image]
-│➪ ${prefix}setexif
-│➪ ${prefix}setmenu [option]
+│⛧⸸  ${prefix}sewa
+│⛧⸸  ${prefix}react [emoji]
+│⛧⸸  ${prefix}chat [option]
+│⛧⸸  ${prefix}join [link]
+│⛧⸸  ${prefix}leave
+│⛧⸸  ${prefix}block @user
+│⛧⸸  ${prefix}unblock @user
+│⛧⸸  ${prefix}bcgroup [text]
+│⛧⸸  ${prefix}bcall [text]
+│⛧⸸  ${prefix}setppbot [image]
+│⛧⸸  ${prefix}setexif
+│⛧⸸  ${prefix}setmenu [option]
 ╰───────────────❏
 ╭─❏ *『 GROUP MENU 』*
-│➪ ${prefix}linkgroup
-│➪ ${prefix}ephemeral [option]
-│➪ ${prefix}setppgc [image]
-│➪ ${prefix}setname [text]
-│➪ ${prefix}setdesc [text]
-│➪ ${prefix}group [option]
-│➪ ${prefix}editinfo [option]
-│➪ ${prefix}add @user
-│➪ ${prefix}kick @user
-│➪ ${prefix}hidetag [text]
-│➪ ${prefix}tagall [text]
-│➪ ${prefix}totag [reply]
-│➪ ${prefix}antilink [on/off]
-│➪ ${prefix}mute [on/off]
-│➪ ${prefix}promote @user
-│➪ ${prefix}demote @user
-│➪ ${prefix}vote [text]
-│➪ ${prefix}devote
-│➪ ${prefix}upvote
-│➪ ${prefix}cekvote
-│➪ ${prefix}hapusvote
+│⛧⸸  ${prefix}linkgroup
+│⛧⸸  ${prefix}ephemeral [option]
+│⛧⸸  ${prefix}setppgc [image]
+│⛧⸸  ${prefix}setname [text]
+│⛧⸸  ${prefix}setdesc [text]
+│⛧⸸  ${prefix}group [option]
+│⛧⸸  ${prefix}editinfo [option]
+│⛧⸸  ${prefix}add @user
+│⛧⸸  ${prefix}kick @user
+│⛧⸸  ${prefix}hidetag [text]
+│⛧⸸  ${prefix}tagall [text]
+│⛧⸸  ${prefix}totag [reply]
+│⛧⸸  ${prefix}antilink [on/off]
+│⛧⸸  ${prefix}mute [on/off]
+│⛧⸸  ${prefix}promote @user
+│⛧⸸  ${prefix}demote @user
+│⛧⸸  ${prefix}vote [text]
+│⛧⸸  ${prefix}devote
+│⛧⸸  ${prefix}upvote
+│⛧⸸  ${prefix}cekvote
+│⛧⸸  ${prefix}hapusvote
 ╰───────────────❏
 ╭─❏ *『 WEBZONE MENU 』*
-│➪ ${prefix}playstore
-│➪ ${prefix}gsmarena
-│➪ ${prefix}jadwalbioskop
-│➪ ${prefix}nowplayingbioskop
-│➪ ${prefix}aminio
-│➪ ${prefix}wattpad
-│➪ ${prefix}webtoons
-│➪ ${prefix}drakor
+│⛧⸸  ${prefix}playstore
+│⛧⸸  ${prefix}gsmarena
+│⛧⸸  ${prefix}jadwalbioskop
+│⛧⸸  ${prefix}nowplayingbioskop
+│⛧⸸  ${prefix}aminio
+│⛧⸸  ${prefix}wattpad
+│⛧⸸  ${prefix}webtoons
+│⛧⸸  ${prefix}drakor
 ╰───────────────❏
 ╭─❏ *『 DOWNLOADER MENU 』*
-│➪ ${prefix}tiktoknowm [url]
-│➪ ${prefix}tiktokwm [url]
-│➪ ${prefix}tiktokmp3 [url]
-│➪ ${prefix}instagram [url]
-│➪ ${prefix}twitter [url]
-│➪ ${prefix}twittermp3 [url]
-│➪ ${prefix}facebook [url]
-│➪ ${prefix}pinterestdl [url]
-│➪ ${prefix}ytmp3 [url]
-│➪ ${prefix}ytmp4 [url]
-│➪ ${prefix}getmusic [query]
-│➪ ${prefix}getvideo [query]
-│➪ ${prefix}umma [url]
-│➪ ${prefix}joox [query]
-│➪ ${prefix}soundcloud [url]
+│⛧⸸  ${prefix}tiktoknowm [url]
+│⛧⸸  ${prefix}tiktokwm [url]
+│⛧⸸  ${prefix}tiktokmp3 [url]
+│⛧⸸  ${prefix}instagram [url]
+│⛧⸸  ${prefix}twitter [url]
+│⛧⸸  ${prefix}twittermp3 [url]
+│⛧⸸  ${prefix}facebook [url]
+│⛧⸸  ${prefix}pinterestdl [url]
+│⛧⸸  ${prefix}ytmp3 [url]
+│⛧⸸  ${prefix}ytmp4 [url]
+│⛧⸸  ${prefix}getmusic [query]
+│⛧⸸  ${prefix}getvideo [query]
+│⛧⸸  ${prefix}umma [url]
+│⛧⸸  ${prefix}joox [query]
+│⛧⸸  ${prefix}soundcloud [url]
 ╰───────────────❏
 ╭─❏ *『 SEARCH MENU 』*
-│➪ ${prefix}play [query]
-│➪ ${prefix}yts [query]
-│➪ ${prefix}google [query]
-│➪ ${prefix}gimage [query]
-│➪ ${prefix}pinterest [query]
-│➪ ${prefix}wallpaper [query]
-│➪ ${prefix}wikimedia [query]
-│➪ ${prefix}ytsearch [query]
-│➪ ${prefix}ringtone [query]
-│➪ ${prefix}stalk [option] [query]
+│⛧⸸  ${prefix}play [query]
+│⛧⸸  ${prefix}yts [query]
+│⛧⸸  ${prefix}google [query]
+│⛧⸸  ${prefix}gimage [query]
+│⛧⸸  ${prefix}pinterest [query]
+│⛧⸸  ${prefix}wallpaper [query]
+│⛧⸸  ${prefix}wikimedia [query]
+│⛧⸸  ${prefix}ytsearch [query]
+│⛧⸸  ${prefix}ringtone [query]
+│⛧⸸  ${prefix}stalk [option] [query]
 ╰───────────────❏
 ╭─❏ *『 RANDOM MENU 』*
-│➪ ${prefix}coffe
-│➪ ${prefix}quotesanime
-│➪ ${prefix}motivasi
-│➪ ${prefix}dilanquote
-│➪ ${prefix}bucinquote
-│➪ ${prefix}katasenja
-│➪ ${prefix}puisi
-│➪ ${prefix}couple
-│➪ ${prefix}anime
-│➪ ${prefix}waifu
-│➪ ${prefix}husbu
-│➪ ${prefix}neko
-│➪ ${prefix}shinobu
+│⛧⸸  ${prefix}coffe
+│⛧⸸  ${prefix}quotesanime
+│⛧⸸  ${prefix}motivasi
+│⛧⸸  ${prefix}dilanquote
+│⛧⸸  ${prefix}bucinquote
+│⛧⸸  ${prefix}katasenja
+│⛧⸸  ${prefix}puisi
+│⛧⸸  ${prefix}couple
+│⛧⸸  ${prefix}anime
+│⛧⸸  ${prefix}waifu
+│⛧⸸  ${prefix}husbu
+│⛧⸸  ${prefix}neko
+│⛧⸸  ${prefix}shinobu
 ╰───────────────❏
 ╭─❏ *『 TEXT PRO MENU 』*
-│➪ ${prefix}3dchristmas
-│➪ ${prefix}3ddeepsea
-│➪ ${prefix}americanflag
-│➪ ${prefix}3dscifi
-│➪ ${prefix}3drainbow
-│➪ ${prefix}3dwaterpipe
-│➪ ${prefix}halloweenskeleton
-│➪ ${prefix}sketch
-│➪ ${prefix}bluecircuit
-│➪ ${prefix}space
-│➪ ${prefix}metallic
-│➪ ${prefix}fiction
-│➪ ${prefix}greenhorror
-│➪ ${prefix}transformer
-│➪ ${prefix}berry
-│➪ ${prefix}thunder
-│➪ ${prefix}magma
-│➪ ${prefix}3dcrackedstone
-│➪ ${prefix}3dneonlight
-│➪ ${prefix}impressiveglitch
-│➪ ${prefix}naturalleaves
-│➪ ${prefix}fireworksparkle
-│➪ ${prefix}matrix
-│➪ ${prefix}dropwater
-│➪ ${prefix}harrypotter
-│➪ ${prefix}foggywindow
-│➪ ${prefix}neondevils
-│➪ ${prefix}christmasholiday
-│➪ ${prefix}3dgradient
-│➪ ${prefix}blackpink
-│➪ ${prefix}gluetext
+│⛧⸸  ${prefix}3dchristmas
+│⛧⸸  ${prefix}3ddeepsea
+│⛧⸸  ${prefix}americanflag
+│⛧⸸  ${prefix}3dscifi
+│⛧⸸  ${prefix}3drainbow
+│⛧⸸  ${prefix}3dwaterpipe
+│⛧⸸  ${prefix}halloweenskeleton
+│⛧⸸  ${prefix}sketch
+│⛧⸸  ${prefix}bluecircuit
+│⛧⸸  ${prefix}space
+│⛧⸸  ${prefix}metallic
+│⛧⸸  ${prefix}fiction
+│⛧⸸  ${prefix}greenhorror
+│⛧⸸  ${prefix}transformer
+│⛧⸸  ${prefix}berry
+│⛧⸸  ${prefix}thunder
+│⛧⸸  ${prefix}magma
+│⛧⸸  ${prefix}3dcrackedstone
+│⛧⸸  ${prefix}3dneonlight
+│⛧⸸  ${prefix}impressiveglitch
+│⛧⸸  ${prefix}naturalleaves
+│⛧⸸  ${prefix}fireworksparkle
+│⛧⸸  ${prefix}matrix
+│⛧⸸  ${prefix}dropwater
+│⛧⸸  ${prefix}harrypotter
+│⛧⸸  ${prefix}foggywindow
+│⛧⸸  ${prefix}neondevils
+│⛧⸸  ${prefix}christmasholiday
+│⛧⸸  ${prefix}3dgradient
+│⛧⸸  ${prefix}blackpink
+│⛧⸸  ${prefix}gluetext
 ╰───────────────❏
 ╭─❏ *『 PHOTO OXY MENU 』*
-│➪ ${prefix}shadow
-│➪ ${prefix}romantic
-│➪ ${prefix}smoke
-│➪ ${prefix}burnpapper
-│➪ ${prefix}naruto
-│➪ ${prefix}lovemsg
-│➪ ${prefix}grassmsg
-│➪ ${prefix}lovetext
-│➪ ${prefix}coffecup
-│➪ ${prefix}butterfly
-│➪ ${prefix}harrypotter
-│➪ ${prefix}retrolol
+│⛧⸸  ${prefix}shadow
+│⛧⸸  ${prefix}romantic
+│⛧⸸  ${prefix}smoke
+│⛧⸸  ${prefix}burnpapper
+│⛧⸸  ${prefix}naruto
+│⛧⸸  ${prefix}lovemsg
+│⛧⸸  ${prefix}grassmsg
+│⛧⸸  ${prefix}lovetext
+│⛧⸸  ${prefix}coffecup
+│⛧⸸  ${prefix}butterfly
+│⛧⸸  ${prefix}harrypotter
+│⛧⸸  ${prefix}retrolol
 ╰───────────────❏
 ╭─❏ *『 EPHOTO MENU 』*
-│➪ ${prefix}ffcover
-│➪ ${prefix}crossfire
-│➪ ${prefix}galaxy
-│➪ ${prefix}glass
-│➪ ${prefix}neon
-│➪ ${prefix}beach
-│➪ ${prefix}blackpink
-│➪ ${prefix}igcertificate
-│➪ ${prefix}ytcertificate
+│⛧⸸  ${prefix}ffcover
+│⛧⸸  ${prefix}crossfire
+│⛧⸸  ${prefix}galaxy
+│⛧⸸  ${prefix}glass
+│⛧⸸  ${prefix}neon
+│⛧⸸  ${prefix}beach
+│⛧⸸  ${prefix}blackpink
+│⛧⸸  ${prefix}igcertificate
+│⛧⸸  ${prefix}ytcertificate
 ╰───────────────❏
 ╭─❏ *『 FUN MENU 』*
-│➪ ${prefix}simih
-│➪ ${prefix}halah
-│➪ ${prefix}hilih
-│➪ ${prefix}huluh
-│➪ ${prefix}heleh
-│➪ ${prefix}holoh
-│➪ ${prefix}jadian
-│➪ ${prefix}jodohku
-│➪ ${prefix}delttt
-│➪ ${prefix}tictactoe
-│➪ ${prefix}family100
-│➪ ${prefix}tebak [option]
-│➪ ${prefix}math [mode]
-│➪ ${prefix}suitpvp [@tag]
+│⛧⸸  ${prefix}simih
+│⛧⸸  ${prefix}halah
+│⛧⸸  ${prefix}hilih
+│⛧⸸  ${prefix}huluh
+│⛧⸸  ${prefix}heleh
+│⛧⸸  ${prefix}holoh
+│⛧⸸  ${prefix}jadian
+│⛧⸸  ${prefix}jodohku
+│⛧⸸  ${prefix}delttt
+│⛧⸸  ${prefix}tictactoe
+│⛧⸸  ${prefix}family100
+│⛧⸸  ${prefix}tebak [option]
+│⛧⸸  ${prefix}math [mode]
+│⛧⸸  ${prefix}suitpvp [@tag]
 ╰───────────────❏
 ╭─❏ *『 PRIMBON MENU 』*
-│➪ ${prefix}nomorhoki
-│➪ ${prefix}artimimpi
-│➪ ${prefix}artinama
-│➪ ${prefix}ramaljodoh
-│➪ ${prefix}ramaljodohbali
-│➪ ${prefix}suamiistri
-│➪ ${prefix}ramalcinta
-│➪ ${prefix}cocoknama
-│➪ ${prefix}pasangan
-│➪ ${prefix}jadiannikah
-│➪ ${prefix}sifatusaha
-│➪ ${prefix}rezeki
-│➪ ${prefix}pekerjaan
-│➪ ${prefix}nasib
-│➪ ${prefix}penyakit
-│➪ ${prefix}tarot
-│➪ ${prefix}fengshui
-│➪ ${prefix}haribaik
-│➪ ${prefix}harisangar
-│➪ ${prefix}harisial
-│➪ ${prefix}nagahari
-│➪ ${prefix}arahrezeki
-│➪ ${prefix}peruntungan
-│➪ ${prefix}weton
-│➪ ${prefix}karakter
-│➪ ${prefix}keberuntungan
-│➪ ${prefix}memancing
-│➪ ${prefix}masasubur
-│➪ ${prefix}zodiak
-│➪ ${prefix}shio
+│⛧⸸  ${prefix}nomorhoki
+│⛧⸸  ${prefix}artimimpi
+│⛧⸸  ${prefix}artinama
+│⛧⸸  ${prefix}ramaljodoh
+│⛧⸸  ${prefix}ramaljodohbali
+│⛧⸸  ${prefix}suamiistri
+│⛧⸸  ${prefix}ramalcinta
+│⛧⸸  ${prefix}cocoknama
+│⛧⸸  ${prefix}pasangan
+│⛧⸸  ${prefix}jadiannikah
+│⛧⸸  ${prefix}sifatusaha
+│⛧⸸  ${prefix}rezeki
+│⛧⸸  ${prefix}pekerjaan
+│⛧⸸  ${prefix}nasib
+│⛧⸸  ${prefix}penyakit
+│⛧⸸  ${prefix}tarot
+│⛧⸸  ${prefix}fengshui
+│⛧⸸  ${prefix}haribaik
+│⛧⸸  ${prefix}harisangar
+│⛧⸸  ${prefix}harisial
+│⛧⸸  ${prefix}nagahari
+│⛧⸸  ${prefix}arahrezeki
+│⛧⸸  ${prefix}peruntungan
+│⛧⸸  ${prefix}weton
+│⛧⸸  ${prefix}karakter
+│⛧⸸  ${prefix}keberuntungan
+│⛧⸸  ${prefix}memancing
+│⛧⸸  ${prefix}masasubur
+│⛧⸸  ${prefix}zodiak
+│⛧⸸  ${prefix}shio
 ╰───────────────❏
 ╭─❏ *『 CONVERT MENU 』*
-│➪ ${prefix}attp
-│➪ ${prefix}ttp
-│➪ ${prefix}toimage
-│➪ ${prefix}removebg
-│➪ ${prefix}sticker
-│➪ ${prefix}stickerwm
-│➪ ${prefix}emojimix
-│➪ ${prefix}emojimix2
-│➪ ${prefix}tovideo
-│➪ ${prefix}togif
-│➪ ${prefix}tourl
-│➪ ${prefix}tovn
-│➪ ${prefix}tomp3
-│➪ ${prefix}toaudio
-│➪ ${prefix}ebinary
-│➪ ${prefix}dbinary
-│➪ ${prefix}styletext
-│➪ ${prefix}smeme
+│⛧⸸  ${prefix}attp
+│⛧⸸  ${prefix}ttp
+│⛧⸸  ${prefix}toimage
+│⛧⸸  ${prefix}removebg
+│⛧⸸  ${prefix}sticker
+│⛧⸸  ${prefix}stickerwm
+│⛧⸸  ${prefix}emojimix
+│⛧⸸  ${prefix}emojimix2
+│⛧⸸  ${prefix}tovideo
+│⛧⸸  ${prefix}togif
+│⛧⸸  ${prefix}tourl
+│⛧⸸  ${prefix}tovn
+│⛧⸸  ${prefix}tomp3
+│⛧⸸  ${prefix}toaudio
+│⛧⸸  ${prefix}ebinary
+│⛧⸸  ${prefix}dbinary
+│⛧⸸  ${prefix}styletext
+│⛧⸸  ${prefix}smeme
 ╰───────────────❏
 ╭─❏ *『 MAIN MENU 』*
-│➪ ${prefix}ping
-│➪ ${prefix}owner
-│➪ ${prefix}menu / ${prefix}help / ${prefix}?
-│➪ ${prefix}delete
-│➪ ${prefix}infochat
-│➪ ${prefix}quoted
-│➪ ${prefix}listpc
-│➪ ${prefix}listgc
-│➪ ${prefix}listonline
-│➪ ${prefix}speedtest
+│⛧⸸  ${prefix}ping
+│⛧⸸  ${prefix}owner
+│⛧⸸  ${prefix}menu / ${prefix}help / ${prefix}?
+│⛧⸸  ${prefix}delete
+│⛧⸸  ${prefix}infochat
+│⛧⸸  ${prefix}quoted
+│⛧⸸  ${prefix}listpc
+│⛧⸸  ${prefix}listgc
+│⛧⸸  ${prefix}listonline
+│⛧⸸  ${prefix}speedtest
 ╰───────────────❏
 ╭─❏ *『 DATABASE MENU 』*
-│➪ ${prefix}setcmd
-│➪ ${prefix}listcmd
-│➪ ${prefix}delcmd
-│➪ ${prefix}lockcmd
-│➪ ${prefix}addmsg
-│➪ ${prefix}listmsg
-│➪ ${prefix}getmsg
-│➪ ${prefix}delmsg
+│⛧⸸  ${prefix}setcmd
+│⛧⸸  ${prefix}listcmd
+│⛧⸸  ${prefix}delcmd
+│⛧⸸  ${prefix}lockcmd
+│⛧⸸  ${prefix}addmsg
+│⛧⸸  ${prefix}listmsg
+│⛧⸸  ${prefix}getmsg
+│⛧⸸  ${prefix}delmsg
 ╰───────────────❏
 ╭─❏ *『 ANONYMOUS MENU 』*
-│➪ ${prefix}anonymous
-│➪ ${prefix}start
-│➪ ${prefix}next
-│➪ ${prefix}keluar
+│⛧⸸  ${prefix}anonymous
+│⛧⸸  ${prefix}start
+│⛧⸸  ${prefix}next
+│⛧⸸  ${prefix}keluar
 ╰───────────────❏
 ╭─❏ *『 ISLAMIC MENU 』*
-│➪ ${prefix}iqra
-│➪ ${prefix}hadist
-│➪ ${prefix}alquran
-│➪ ${prefix}juzamma
-│➪ ${prefix}tafsirsurah
+│⛧⸸  ${prefix}iqra
+│⛧⸸  ${prefix}hadist
+│⛧⸸  ${prefix}alquran
+│⛧⸸  ${prefix}juzamma
+│⛧⸸  ${prefix}tafsirsurah
 ╰───────────────❏
 ╭─❏ *『 VOICE CHANGER MENU 』*
-│➪ ${prefix}bass
-│➪ ${prefix}blown
-│➪ ${prefix}deep
-│➪ ${prefix}earrape
-│➪ ${prefix}fast
-│➪ ${prefix}fat
-│➪ ${prefix}nightcore
-│➪ ${prefix}reverse
-│➪ ${prefix}robot
-│➪ ${prefix}slow
-│➪ ${prefix}tupai
+│⛧⸸  ${prefix}bass
+│⛧⸸  ${prefix}blown
+│⛧⸸  ${prefix}deep
+│⛧⸸  ${prefix}earrape
+│⛧⸸  ${prefix}fast
+│⛧⸸  ${prefix}fat
+│⛧⸸  ${prefix}nightcore
+│⛧⸸  ${prefix}reverse
+│⛧⸸  ${prefix}robot
+│⛧⸸  ${prefix}slow
+│⛧⸸  ${prefix}tupai
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3406,57 +3406,62 @@ let btn = [{
                                     displayText: 'List menu📚',
                                     id: 'command'
                                 }
+
+                                quickReplyButton: {
+                                    displayText: '⛧ S A T H A N ⸸ ',
+                                    id: '⛧ S A T H A N ⸸'
+                                }
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'ownermenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm:ss')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm:ss')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm:ss')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm:ss')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm:ss')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm:ss')}
 ╰───────────────❏
 
 
 ╭─❏ *『 owner MENU 』*
-│➪ ${prefix}sewa
-│➪ ${prefix}react [emoji]
-│➪ ${prefix}chat [option]
-│➪ ${prefix}join [link]
-│➪ ${prefix}leave
-│➪ ${prefix}block @user
-│➪ ${prefix}unblock @user
-│➪ ${prefix}bcgroup [text]
-│➪ ${prefix}bcall [text]
-│➪ ${prefix}setppbot [image]
-│➪ ${prefix}setexif
-│➪ ${prefix}setmenu [option]
+│⛧⸸  ${prefix}sewa
+│⛧⸸  ${prefix}react [emoji]
+│⛧⸸  ${prefix}chat [option]
+│⛧⸸  ${prefix}join [link]
+│⛧⸸  ${prefix}leave
+│⛧⸸  ${prefix}block @user
+│⛧⸸  ${prefix}unblock @user
+│⛧⸸  ${prefix}bcgroup [text]
+│⛧⸸  ${prefix}bcall [text]
+│⛧⸸  ${prefix}setppbot [image]
+│⛧⸸  ${prefix}setexif
+│⛧⸸  ${prefix}setmenu [option]
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3486,63 +3491,63 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'groupmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 GROUP MENU 』*
-│➪ ${prefix}linkgroup
-│➪ ${prefix}ephemeral [option]
-│➪ ${prefix}setppgc [image]
-│➪ ${prefix}setname [text]
-│➪ ${prefix}setdesc [text]
-│➪ ${prefix}group [option]
-│➪ ${prefix}editinfo [option]
-│➪ ${prefix}add @user
-│➪ ${prefix}kick @user
-│➪ ${prefix}hidetag [text]
-│➪ ${prefix}tagall [text]
-│➪ ${prefix}totag [reply]
-│➪ ${prefix}antilink [on/off]
-│➪ ${prefix}mute [on/off]
-│➪ ${prefix}promote @user
-│➪ ${prefix}demote @user
-│➪ ${prefix}vote [text]
-│➪ ${prefix}devote
-│➪ ${prefix}upvote
-│➪ ${prefix}cekvote
-│➪ ${prefix}hapusvote
+│⛧⸸  ${prefix}linkgroup
+│⛧⸸  ${prefix}ephemeral [option]
+│⛧⸸  ${prefix}setppgc [image]
+│⛧⸸  ${prefix}setname [text]
+│⛧⸸  ${prefix}setdesc [text]
+│⛧⸸  ${prefix}group [option]
+│⛧⸸  ${prefix}editinfo [option]
+│⛧⸸  ${prefix}add @user
+│⛧⸸  ${prefix}kick @user
+│⛧⸸  ${prefix}hidetag [text]
+│⛧⸸  ${prefix}tagall [text]
+│⛧⸸  ${prefix}totag [reply]
+│⛧⸸  ${prefix}antilink [on/off]
+│⛧⸸  ${prefix}mute [on/off]
+│⛧⸸  ${prefix}promote @user
+│⛧⸸  ${prefix}demote @user
+│⛧⸸  ${prefix}vote [text]
+│⛧⸸  ${prefix}devote
+│⛧⸸  ${prefix}upvote
+│⛧⸸  ${prefix}cekvote
+│⛧⸸  ${prefix}hapusvote
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3572,50 +3577,50 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'webzonemenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 WEBZONE MENU 』*
-│➪ ${prefix}playstore
-│➪ ${prefix}gsmarena
-│➪ ${prefix}jadwalbioskop
-│➪ ${prefix}nowplayingbioskop
-│➪ ${prefix}aminio
-│➪ ${prefix}wattpad
-│➪ ${prefix}webtoons
-│➪ ${prefix}drakor
+│⛧⸸  ${prefix}playstore
+│⛧⸸  ${prefix}gsmarena
+│⛧⸸  ${prefix}jadwalbioskop
+│⛧⸸  ${prefix}nowplayingbioskop
+│⛧⸸  ${prefix}aminio
+│⛧⸸  ${prefix}wattpad
+│⛧⸸  ${prefix}webtoons
+│⛧⸸  ${prefix}drakor
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3645,57 +3650,57 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'downloadermenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 DOWNLOADER MENU 』*
-│➪ ${prefix}tiktoknowm [url]
-│➪ ${prefix}tiktokwm [url]
-│➪ ${prefix}tiktokmp3 [url]
-│➪ ${prefix}instagram [url]
-│➪ ${prefix}twitter [url]
-│➪ ${prefix}twittermp3 [url]
-│➪ ${prefix}facebook [url]
-│➪ ${prefix}pinterestdl [url]
-│➪ ${prefix}ytmp3 [url]
-│➪ ${prefix}ytmp4 [url]
-│➪ ${prefix}getmusic [query]
-│➪ ${prefix}getvideo [query]
-│➪ ${prefix}umma [url]
-│➪ ${prefix}joox [query]
-│➪ ${prefix}soundcloud [url]
+│⛧⸸  ${prefix}tiktoknowm [url]
+│⛧⸸  ${prefix}tiktokwm [url]
+│⛧⸸  ${prefix}tiktokmp3 [url]
+│⛧⸸  ${prefix}instagram [url]
+│⛧⸸  ${prefix}twitter [url]
+│⛧⸸  ${prefix}twittermp3 [url]
+│⛧⸸  ${prefix}facebook [url]
+│⛧⸸  ${prefix}pinterestdl [url]
+│⛧⸸  ${prefix}ytmp3 [url]
+│⛧⸸  ${prefix}ytmp4 [url]
+│⛧⸸  ${prefix}getmusic [query]
+│⛧⸸  ${prefix}getvideo [query]
+│⛧⸸  ${prefix}umma [url]
+│⛧⸸  ${prefix}joox [query]
+│⛧⸸  ${prefix}soundcloud [url]
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3725,52 +3730,52 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'searchmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 SEARCH MENU 』*
-│➪ ${prefix}play [query]
-│➪ ${prefix}yts [query]
-│➪ ${prefix}google [query]
-│➪ ${prefix}gimage [query]
-│➪ ${prefix}pinterest [query]
-│➪ ${prefix}wallpaper [query]
-│➪ ${prefix}wikimedia [query]
-│➪ ${prefix}ytsearch [query]
-│➪ ${prefix}ringtone [query]
-│➪ ${prefix}stalk [option] [query]
+│⛧⸸  ${prefix}play [query]
+│⛧⸸  ${prefix}yts [query]
+│⛧⸸  ${prefix}google [query]
+│⛧⸸  ${prefix}gimage [query]
+│⛧⸸  ${prefix}pinterest [query]
+│⛧⸸  ${prefix}wallpaper [query]
+│⛧⸸  ${prefix}wikimedia [query]
+│⛧⸸  ${prefix}ytsearch [query]
+│⛧⸸  ${prefix}ringtone [query]
+│⛧⸸  ${prefix}stalk [option] [query]
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3800,55 +3805,55 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'randommenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 RANDOM MENU 』*
-│➪ ${prefix}coffe
-│➪ ${prefix}quotesanime
-│➪ ${prefix}motivasi
-│➪ ${prefix}dilanquote
-│➪ ${prefix}bucinquote
-│➪ ${prefix}katasenja
-│➪ ${prefix}puisi
-│➪ ${prefix}couple
-│➪ ${prefix}anime
-│➪ ${prefix}waifu
-│➪ ${prefix}husbu
-│➪ ${prefix}neko
-│➪ ${prefix}shinobu
+│⛧⸸  ${prefix}coffe
+│⛧⸸  ${prefix}quotesanime
+│⛧⸸  ${prefix}motivasi
+│⛧⸸  ${prefix}dilanquote
+│⛧⸸  ${prefix}bucinquote
+│⛧⸸  ${prefix}katasenja
+│⛧⸸  ${prefix}puisi
+│⛧⸸  ${prefix}couple
+│⛧⸸  ${prefix}anime
+│⛧⸸  ${prefix}waifu
+│⛧⸸  ${prefix}husbu
+│⛧⸸  ${prefix}neko
+│⛧⸸  ${prefix}shinobu
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3878,73 +3883,73 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
  case 'textpromenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 TEXT PRO MENU 』*
-│➪ ${prefix}3dchristmas
-│➪ ${prefix}3ddeepsea
-│➪ ${prefix}americanflag
-│➪ ${prefix}3dscifi
-│➪ ${prefix}3drainbow
-│➪ ${prefix}3dwaterpipe
-│➪ ${prefix}halloweenskeleton
-│➪ ${prefix}sketch
-│➪ ${prefix}bluecircuit
-│➪ ${prefix}space
-│➪ ${prefix}metallic
-│➪ ${prefix}fiction
-│➪ ${prefix}greenhorror
-│➪ ${prefix}transformer
-│➪ ${prefix}berry
-│➪ ${prefix}thunder
-│➪ ${prefix}magma
-│➪ ${prefix}3dcrackedstone
-│➪ ${prefix}3dneonlight
-│➪ ${prefix}impressiveglitch
-│➪ ${prefix}naturalleaves
-│➪ ${prefix}fireworksparkle
-│➪ ${prefix}matrix
-│➪ ${prefix}dropwater
-│➪ ${prefix}harrypotter
-│➪ ${prefix}foggywindow
-│➪ ${prefix}neondevils
-│➪ ${prefix}christmasholiday
-│➪ ${prefix}3dgradient
-│➪ ${prefix}blackpink
-│➪ ${prefix}gluetext
+│⛧⸸  ${prefix}3dchristmas
+│⛧⸸  ${prefix}3ddeepsea
+│⛧⸸  ${prefix}americanflag
+│⛧⸸  ${prefix}3dscifi
+│⛧⸸  ${prefix}3drainbow
+│⛧⸸  ${prefix}3dwaterpipe
+│⛧⸸  ${prefix}halloweenskeleton
+│⛧⸸  ${prefix}sketch
+│⛧⸸  ${prefix}bluecircuit
+│⛧⸸  ${prefix}space
+│⛧⸸  ${prefix}metallic
+│⛧⸸  ${prefix}fiction
+│⛧⸸  ${prefix}greenhorror
+│⛧⸸  ${prefix}transformer
+│⛧⸸  ${prefix}berry
+│⛧⸸  ${prefix}thunder
+│⛧⸸  ${prefix}magma
+│⛧⸸  ${prefix}3dcrackedstone
+│⛧⸸  ${prefix}3dneonlight
+│⛧⸸  ${prefix}impressiveglitch
+│⛧⸸  ${prefix}naturalleaves
+│⛧⸸  ${prefix}fireworksparkle
+│⛧⸸  ${prefix}matrix
+│⛧⸸  ${prefix}dropwater
+│⛧⸸  ${prefix}harrypotter
+│⛧⸸  ${prefix}foggywindow
+│⛧⸸  ${prefix}neondevils
+│⛧⸸  ${prefix}christmasholiday
+│⛧⸸  ${prefix}3dgradient
+│⛧⸸  ${prefix}blackpink
+│⛧⸸  ${prefix}gluetext
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -3974,54 +3979,54 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'photooxymenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 PHOTO OXY MENU 』*
-│➪ ${prefix}shadow
-│➪ ${prefix}romantic
-│➪ ${prefix}smoke
-│➪ ${prefix}burnpapper
-│➪ ${prefix}naruto
-│➪ ${prefix}lovemsg
-│➪ ${prefix}grassmsg
-│➪ ${prefix}lovetext
-│➪ ${prefix}coffecup
-│➪ ${prefix}butterfly
-│➪ ${prefix}harrypotter
-│➪ ${prefix}retrolol
+│⛧⸸  ${prefix}shadow
+│⛧⸸  ${prefix}romantic
+│⛧⸸  ${prefix}smoke
+│⛧⸸  ${prefix}burnpapper
+│⛧⸸  ${prefix}naruto
+│⛧⸸  ${prefix}lovemsg
+│⛧⸸  ${prefix}grassmsg
+│⛧⸸  ${prefix}lovetext
+│⛧⸸  ${prefix}coffecup
+│⛧⸸  ${prefix}butterfly
+│⛧⸸  ${prefix}harrypotter
+│⛧⸸  ${prefix}retrolol
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4051,51 +4056,51 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'ephotomenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 EPHOTO MENU 』*
-│➪ ${prefix}ffcover
-│➪ ${prefix}crossfire
-│➪ ${prefix}galaxy
-│➪ ${prefix}glass
-│➪ ${prefix}neon
-│➪ ${prefix}beach
-│➪ ${prefix}blackpink
-│➪ ${prefix}igcertificate
-│➪ ${prefix}ytcertificate
+│⛧⸸  ${prefix}ffcover
+│⛧⸸  ${prefix}crossfire
+│⛧⸸  ${prefix}galaxy
+│⛧⸸  ${prefix}glass
+│⛧⸸  ${prefix}neon
+│⛧⸸  ${prefix}beach
+│⛧⸸  ${prefix}blackpink
+│⛧⸸  ${prefix}igcertificate
+│⛧⸸  ${prefix}ytcertificate
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4125,56 +4130,56 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'funmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 FUN MENU 』*
-│➪ ${prefix}simih
-│➪ ${prefix}halah
-│➪ ${prefix}hilih
-│➪ ${prefix}huluh
-│➪ ${prefix}heleh
-│➪ ${prefix}holoh
-│➪ ${prefix}jadian
-│➪ ${prefix}jodohku
-│➪ ${prefix}delttt
-│➪ ${prefix}tictactoe
-│➪ ${prefix}family100
-│➪ ${prefix}tebak [option]
-│➪ ${prefix}math [mode]
-│➪ ${prefix}suitpvp [@tag]
+│⛧⸸  ${prefix}simih
+│⛧⸸  ${prefix}halah
+│⛧⸸  ${prefix}hilih
+│⛧⸸  ${prefix}huluh
+│⛧⸸  ${prefix}heleh
+│⛧⸸  ${prefix}holoh
+│⛧⸸  ${prefix}jadian
+│⛧⸸  ${prefix}jodohku
+│⛧⸸  ${prefix}delttt
+│⛧⸸  ${prefix}tictactoe
+│⛧⸸  ${prefix}family100
+│⛧⸸  ${prefix}tebak [option]
+│⛧⸸  ${prefix}math [mode]
+│⛧⸸  ${prefix}suitpvp [@tag]
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4204,72 +4209,72 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'primbonmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 PRIMBON MENU 』*
-│➪ ${prefix}nomorhoki
-│➪ ${prefix}artimimpi
-│➪ ${prefix}artinama
-│➪ ${prefix}ramaljodoh
-│➪ ${prefix}ramaljodohbali
-│➪ ${prefix}suamiistri
-│➪ ${prefix}ramalcinta
-│➪ ${prefix}cocoknama
-│➪ ${prefix}pasangan
-│➪ ${prefix}jadiannikah
-│➪ ${prefix}sifatusaha
-│➪ ${prefix}rezeki
-│➪ ${prefix}pekerjaan
-│➪ ${prefix}nasib
-│➪ ${prefix}penyakit
-│➪ ${prefix}tarot
-│➪ ${prefix}fengshui
-│➪ ${prefix}haribaik
-│➪ ${prefix}harisangar
-│➪ ${prefix}harisial
-│➪ ${prefix}nagahari
-│➪ ${prefix}arahrezeki
-│➪ ${prefix}peruntungan
-│➪ ${prefix}weton
-│➪ ${prefix}karakter
-│➪ ${prefix}keberuntungan
-│➪ ${prefix}memancing
-│➪ ${prefix}masasubur
-│➪ ${prefix}zodiak
-│➪ ${prefix}shio
+│⛧⸸  ${prefix}nomorhoki
+│⛧⸸  ${prefix}artimimpi
+│⛧⸸  ${prefix}artinama
+│⛧⸸  ${prefix}ramaljodoh
+│⛧⸸  ${prefix}ramaljodohbali
+│⛧⸸  ${prefix}suamiistri
+│⛧⸸  ${prefix}ramalcinta
+│⛧⸸  ${prefix}cocoknama
+│⛧⸸  ${prefix}pasangan
+│⛧⸸  ${prefix}jadiannikah
+│⛧⸸  ${prefix}sifatusaha
+│⛧⸸  ${prefix}rezeki
+│⛧⸸  ${prefix}pekerjaan
+│⛧⸸  ${prefix}nasib
+│⛧⸸  ${prefix}penyakit
+│⛧⸸  ${prefix}tarot
+│⛧⸸  ${prefix}fengshui
+│⛧⸸  ${prefix}haribaik
+│⛧⸸  ${prefix}harisangar
+│⛧⸸  ${prefix}harisial
+│⛧⸸  ${prefix}nagahari
+│⛧⸸  ${prefix}arahrezeki
+│⛧⸸  ${prefix}peruntungan
+│⛧⸸  ${prefix}weton
+│⛧⸸  ${prefix}karakter
+│⛧⸸  ${prefix}keberuntungan
+│⛧⸸  ${prefix}memancing
+│⛧⸸  ${prefix}masasubur
+│⛧⸸  ${prefix}zodiak
+│⛧⸸  ${prefix}shio
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4299,60 +4304,60 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'convertmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 CONVERT MENU 』*
-│➪ ${prefix}attp
-│➪ ${prefix}ttp
-│➪ ${prefix}toimage
-│➪ ${prefix}removebg
-│➪ ${prefix}sticker
-│➪ ${prefix}stickerwm
-│➪ ${prefix}emojimix
-│➪ ${prefix}emojimix2
-│➪ ${prefix}tovideo
-│➪ ${prefix}togif
-│➪ ${prefix}tourl
-│➪ ${prefix}tovn
-│➪ ${prefix}tomp3
-│➪ ${prefix}toaudio
-│➪ ${prefix}ebinary
-│➪ ${prefix}dbinary
-│➪ ${prefix}styletext
-│➪ ${prefix}smeme
+│⛧⸸  ${prefix}attp
+│⛧⸸  ${prefix}ttp
+│⛧⸸  ${prefix}toimage
+│⛧⸸  ${prefix}removebg
+│⛧⸸  ${prefix}sticker
+│⛧⸸  ${prefix}stickerwm
+│⛧⸸  ${prefix}emojimix
+│⛧⸸  ${prefix}emojimix2
+│⛧⸸  ${prefix}tovideo
+│⛧⸸  ${prefix}togif
+│⛧⸸  ${prefix}tourl
+│⛧⸸  ${prefix}tovn
+│⛧⸸  ${prefix}tomp3
+│⛧⸸  ${prefix}toaudio
+│⛧⸸  ${prefix}ebinary
+│⛧⸸  ${prefix}dbinary
+│⛧⸸  ${prefix}styletext
+│⛧⸸  ${prefix}smeme
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4382,52 +4387,52 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'mainmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
            
 ╭─❏ *『 MAIN MENU 』*
-│➪ ${prefix}ping
-│➪ ${prefix}owner
-│➪ ${prefix}menu / ${prefix}help / ${prefix}?
-│➪ ${prefix}delete
-│➪ ${prefix}infochat
-│➪ ${prefix}quoted
-│➪ ${prefix}listpc
-│➪ ${prefix}listgc
-│➪ ${prefix}listonline
-│➪ ${prefix}speedtest
+│⛧⸸  ${prefix}ping
+│⛧⸸  ${prefix}owner
+│⛧⸸  ${prefix}menu / ${prefix}help / ${prefix}?
+│⛧⸸  ${prefix}delete
+│⛧⸸  ${prefix}infochat
+│⛧⸸  ${prefix}quoted
+│⛧⸸  ${prefix}listpc
+│⛧⸸  ${prefix}listgc
+│⛧⸸  ${prefix}listonline
+│⛧⸸  ${prefix}speedtest
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4457,50 +4462,50 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'databasemenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 DATABASE MENU 』*
-│➪ ${prefix}setcmd
-│➪ ${prefix}listcmd
-│➪ ${prefix}delcmd
-│➪ ${prefix}lockcmd
-│➪ ${prefix}addmsg
-│➪ ${prefix}listmsg
-│➪ ${prefix}getmsg
-│➪ ${prefix}delmsg
+│⛧⸸  ${prefix}setcmd
+│⛧⸸  ${prefix}listcmd
+│⛧⸸  ${prefix}delcmd
+│⛧⸸  ${prefix}lockcmd
+│⛧⸸  ${prefix}addmsg
+│⛧⸸  ${prefix}listmsg
+│⛧⸸  ${prefix}getmsg
+│⛧⸸  ${prefix}delmsg
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4530,46 +4535,46 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'anonymousmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 ANONYMOUS MENU 』*
-│➪ ${prefix}anonymous
-│➪ ${prefix}start
-│➪ ${prefix}next
-│➪ ${prefix}keluar
+│⛧⸸  ${prefix}anonymous
+│⛧⸸  ${prefix}start
+│⛧⸸  ${prefix}next
+│⛧⸸  ${prefix}keluar
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4599,47 +4604,47 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'islamicmenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 ISLAMIC MENU 』*
-│➪ ${prefix}iqra
-│➪ ${prefix}hadist
-│➪ ${prefix}alquran
-│➪ ${prefix}juzamma
-│➪ ${prefix}tafsirsurah
+│⛧⸸  ${prefix}iqra
+│⛧⸸  ${prefix}hadist
+│⛧⸸  ${prefix}alquran
+│⛧⸸  ${prefix}juzamma
+│⛧⸸  ${prefix}tafsirsurah
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4669,53 +4674,53 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 case 'voicechangermenu': {
 anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO USER 』*
-│ ➪ Name : ${pushname}
-│ ➪ Number : ${m.sender.split('@')[0]}
+│ ⛧⸸  Name : ${pushname}
+│ ⛧⸸  Number : ${m.sender.split('@')[0]}
 ╰───────────────❏
 ╭─❏ *『 INFO BOT 』*
-│ ➪ Prefix : ${prefix}
-│ ➪ Nama : ${global.namabot}
-│ ➪ owner : ${global.namaowner}
-│ ➪ Mode : ${zxyn.public ? 'Public' : 'Self'}
-│ ➪ Runtime : ${runtime(process.uptime())}
-│ ➪ Library : Baileys Multi Device
+│ ⛧⸸  Prefix : ${prefix}
+│ ⛧⸸  Nama : ${global.namabot}
+│ ⛧⸸  owner : ${global.namaowner}
+│ ⛧⸸  Mode : ${zxyn.public ? 'Public' : 'Self'}
+│ ⛧⸸  Runtime : ${runtime(process.uptime())}
+│ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
 ╭─❏ *『 INFO SERVER 』*
-│ ➪ Tanggal : ${jangwak}
-│ ➪ Waktu : ${time}
-│ ➪ WIB : ${moment().utcOffset('+0700').format('HH:mm')}
-│ ➪ WIB : ${moment().utcOffset('+0900').format('HH:mm')}
-│ ➪ WITA : ${moment().utcOffset('+0800').format('HH:mm')}
+│ ⛧⸸  Tanggal : ${jangwak}
+│ ⛧⸸  Waktu : ${time}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0700').format('HH:mm')}
+│ ⛧⸸  WIB : ${moment().utcOffset('+0900').format('HH:mm')}
+│ ⛧⸸  WITA : ${moment().utcOffset('+0800').format('HH:mm')}
 ╰───────────────❏
 
 
 ╭─❏ *『 VOICE CHANGER MENU 』*
-│➪ ${prefix}bass
-│➪ ${prefix}blown
-│➪ ${prefix}deep
-│➪ ${prefix}earrape
-│➪ ${prefix}fast
-│➪ ${prefix}fat
-│➪ ${prefix}nightcore
-│➪ ${prefix}reverse
-│➪ ${prefix}robot
-│➪ ${prefix}slow
-│➪ ${prefix}tupai
+│⛧⸸  ${prefix}bass
+│⛧⸸  ${prefix}blown
+│⛧⸸  ${prefix}deep
+│⛧⸸  ${prefix}earrape
+│⛧⸸  ${prefix}fast
+│⛧⸸  ${prefix}fat
+│⛧⸸  ${prefix}nightcore
+│⛧⸸  ${prefix}reverse
+│⛧⸸  ${prefix}robot
+│⛧⸸  ${prefix}slow
+│⛧⸸  ${prefix}tupai
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
@@ -4745,15 +4750,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
@@ -4788,23 +4793,23 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
 
 case 'donasi': {
 anu = `╭─❏ *『 DONASI 』*
-│ ➪ Dana : 085822347348
-│ ➪ Pulsa : 085822347348,083843192208
+│ ⛧⸸  Dana : 085822347348
+│ ⛧⸸  Pulsa : 085822347348,083843192208
 ╰───────────────❏
 
 *TERIMA KASIH BUAT YANG SUDAH MAU DONASI🤗*`
@@ -4821,15 +4826,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
@@ -4871,15 +4876,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
@@ -4892,7 +4897,7 @@ case 'contributor': {
 •Fandy 
 •Abuzz 
 •Sonel 
-•O S H A D A
+•⛧ S A T H A N ⸸ 
 Penyedia Rest Api :
 https://zenzapis.xyz`
     let btn = [{
@@ -4923,15 +4928,15 @@ https://zenzapis.xyz`
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        zxyn.send5ButImg(m.chat, anu, '© O S H A D A', global.thumb, btn, global.thumb)
+                        zxyn.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        zxyn.send5ButGif(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        zxyn.send5ButVid(m.chat, anu, '© O S H A D A', global.visoka, btn, global.thumb)
+                        zxyn.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        zxyn.send5ButMsg(m.chat, anu, '© O S H A D A', btn)
+                        zxyn.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
                         } else if (setbot.templateLocation) {
-                        zxyn.send5ButLoc(m.chat, anu, '© O S H A D A', global.thumb, btn)
+                        zxyn.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
                         }
                      }
             break
