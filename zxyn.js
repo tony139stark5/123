@@ -3405,9 +3405,8 @@ let btn = [{
                                 quickReplyButton: {
                                     displayText: 'List menu📚',
                                     id: 'command'
-                                }
-
-                                quickReplyButton: {
+                                }, 
+                              quickReplyButton: {
                                     displayText: '⛧ S A T H A N ⸸ ',
                                     id: '⛧ S A T H A N ⸸'
                                 }
