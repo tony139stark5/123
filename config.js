@@ -3,12 +3,12 @@ const chalk = require('chalk')
 
 // Website Api
 global.APIs = {
-	zenz: 'https://dapuhy.xyz',
+	zenz: 'https://api.zeeoneofc.xyz',
 }
 
 // Apikey Website Api
 global.APIKeys = {
-	'https://dapuhy.xyz': 'piceg',
+	'https://api.zeeoneofc.xyz': 'V12',
 }
 
 // Other
