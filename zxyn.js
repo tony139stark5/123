@@ -1263,7 +1263,7 @@ break
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -1302,7 +1302,7 @@ break
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3403,13 +3403,11 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List menu📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }, 
-                              quickReplyButton: {
-                                    displayText: '⛧ S A T H A N ⸸ ',
-                                    id: '⛧ S A T H A N ⸸'
-                                }
+           
+                                
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
@@ -3484,7 +3482,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: ' Menu📚',
+                                    displayText: ' ⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3570,7 +3568,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3643,7 +3641,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3723,7 +3721,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3798,7 +3796,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3876,7 +3874,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -3972,7 +3970,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4049,7 +4047,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4123,7 +4121,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4202,7 +4200,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4297,7 +4295,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4380,7 +4378,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4455,7 +4453,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4528,7 +4526,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4597,7 +4595,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4667,7 +4665,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4743,7 +4741,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4786,7 +4784,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4869,7 +4867,7 @@ let btn = [{
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
@@ -4921,7 +4919,7 @@ https://zenzapis.xyz`
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'M E N U 📚',
+                                    displayText: '⛧ S A T H A N ⸸',
                                     id: 'command'
                                 }
                             }]
