@@ -73,7 +73,7 @@ async function startZxyn() {
     const zxyn = zxynConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Zxyn-MD','Safari','1.0.0'],
+        browser: ['⛧ S A T H A N ⸸','Safari','1.0.0'],
         auth: state
     })
 
