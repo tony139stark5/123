@@ -2243,7 +2243,7 @@ break
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('https://hyhyjkghhi.herokuapp.com/api/dowloader/fbdown?url={ url: text }'))
-                zxyn.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `⭔ Title : ${anu.result.title}`}, { quoted: m })
+               
             }
             break
             case 'pindl': case 'pinterestdl': {
